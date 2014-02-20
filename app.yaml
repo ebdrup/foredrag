@@ -1,0 +1,32 @@
+application: itforedrag
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+default_expiration: 2000d
+
+handlers:
+
+- url: /favicon.ico
+  static_files: static/icons/favicon.ico
+  upload: static/icons/favicon.ico
+  expiration: 10d
+  secure: optional
+
+- url: /js
+  static_dir: static/js
+  secure: optional
+  expiration: 2000d
+
+- url: /css
+  static_dir: static/css
+  secure: optional
+  expiration: 2000d
+
+- url: .*
+  static_files: static/index.html
+  upload: static/(.*) 
+  expiration: 0m
+
+

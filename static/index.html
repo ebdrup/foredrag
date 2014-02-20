@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Allan Ebdrup - foredrag</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<!-- Optional theme
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	-->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+	<div class="container">
+		<h1>Node.js og MongoDB</h1>
+
+		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg"
+		     style="float:left;widht 100px;height:150px;margin-right: 40px;">
+
+		<p>
+			Kunne du tænke dig et foredrag om Node.js eller MongoDB, baseret på flere års praktisk erfaring disse
+			teknologier?</p>
+
+		<p>
+			Så skulle du måske <a href="mailto:allan@878.dk">sende mig en email</a>. Se udpluk af foredrag nedenfor.
+		</p>
+
+		<p>
+			Foredragene bliver holdt af <a href="http://www.linkedin.com/in/ebdrup">Allan Ebdrup</a>
+		</p>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Node.js</h2>
+
+			<h3>Title: Node.js warstories</h3>
+
+			<p>
+				Node.js er JavaScript på serveren. I denne talk vil jeg give en kort introduktion til Node.js, og så vil
+				jeg fortælle om hvordan vi griber vores Node.js udvikling an i e-conomic.</p>
+
+			<p>
+				Vi har webapplikationen
+				debitoor.com, der kører på Node.js og MongoDB, der har været luften i over 2 år. Og jeg har selv
+				arbejdet med mit projekt muscula.com i over 3 år.
+				Jeg vil blandt andet fortælle om:
+			</p>
+			<ul>
+				<li>Hvorfor vi valgte Node.js</li>
+				<li>Vedligeholdelsesvenlig kode</li>
+				<li>Introduktion til Node.js web-frameworket express</li>
+				<li>Monkey patching brugt i praksis</li>
+				<li>Den logiske arkitektur og designvalg vi har taget i vores forretningslogik i Node.js</li>
+				<li>Hvorfor låste vores servere fuldstændig, og svarede ikke?</li>
+			</ul>
+			<p>
+				Udgangspunktet for hele foredraget er vores praktiske erfaringer, hvad vi har lært, hvad der virker for
+				os og fejl vi har begået.
+			</p>
+		</div>
+		<div class="col-md-6">
+			<h2>MongoDB</h2>
+
+			<h3>Title: MongoDB warstories</h3>
+
+			<p>
+				NoSQL er efterhånden en del af hverdagens IT-landskab mange steder. MongoDB er den mest populære
+				variant. I denne talk vil jeg give en basal introduktion til den skemaløse NoSQL database MongoDB og
+				hvordan e-conomic bruger den.
+			</p>
+
+			<p>
+				Vi har kørt MongoDB som det primære datastore på vores applikation debitoor.com i over 2 år, og jeg har
+				brugt den på mit eget projekt muscula.com i 3 år. Jeg vil fortælle meget konkret om, hvordan vi udnytter
+				MongoDB i implementationen af vores REST API som taler JSON.
+				Blandt andet detaljer om:
+			</p>
+			<ul>
+				<li>Introduktion til MongoDB</li>
+				<li>Forskelle ifht. En relationel database</li>
+				<li>Datamodellering - tommelfinger-regler</li>
+				<li>Sikkerhed - hvordan undgår vi JSON-injection</li>
+				<li>Multi tenancy (Hver bruger har sine egne data, som kun hun/han kan se)</li>
+				<li>Patching - hvordan vi ændrer datamodellen, mens systemet kører, uden nogen nedetid</li>
+				<li>Hvorfor havde vi to timers neddetid?</li>
+			</ul>
+			<p>
+				Udgangspunktet for hele foredraget er vores praktiske erfaringer, hvad vi har lært, hvad der virker for
+				os og fejl vi har begået.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<h2>JavaScript</h2>
+
+			<h3>Title: Vedligeholdelsesvenlig JavaScript</h3>
+
+			<p>
+				Kan man virkelig vedligeholde en JavaScript-kodebase på flere millioner linjer kode effektivt?
+				Dette fordrag hander primært om tooling og processer der kan hjælpe dig. Blandt andet:
+			</p>
+			<ul>
+				<li>Hvordan vi skriver tests, test struktur</li>
+				<li>En gennemgang af de mange tools vi bruger, de fleste af dem open source</li>
+				<li>Nogle processer der virker for os</li>
+			</ul>
+			<p>
+				Udgangspunktet for hele foredraget er vores praktiske erfaringer, hvad vi har lært, hvad der virker for
+				os og fejl vi har begået.
+			</p>
+		</div>
+		<div class="col-md-6">
+			<h2>Vil du se noget kode?</h2>
+
+			<h3>Html2pdf.it</h3>
+
+			<p>
+				<a href="http://html2pdf.it">Html2pdf.it</a> er en opensource løsning til at konvereter en web-side til
+				en PDF.
+				<a href="https://github.com/Muscula/html2pdf.it">Sourcekoden</a> ligger på github.
+			</p>
+
+			<h3>Node.js moduler</h3>
+
+			<p>
+				Jeg har lagt nogle opensource <a href="https://github.com/Muscula?tab=repositories">node.js moduler</a>
+				jeg har lavet på
+				github.
+			</p>
+
+			<h2>Andet</h2>
+
+			<p>
+				Jeg har bygget en løsning til at <a href="http://muscula.com">logge JavaScript fejl</a> på dit website i
+				produktion, der bliver brugt af millioner af mennesker hver eneste dag.
+			</p>
+
+		</div>
+	</div>
+
+	<hr>
+
+	<footer>
+		<p>&copy; Allan Ebdrup. <a href="mailto:allan@878.dk">allan@878.dk</a>, skype: allanebdrup</p>
+	</footer>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins)
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+-->
+</body>
+</html>
+
+
+
