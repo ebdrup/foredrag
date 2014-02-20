@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Allan Ebdrup - foredrag</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<!-- Optional theme
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	-->
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		h1 {
+			color: #777 !important;
+			font-weight: bolder;
+		}
+
+		h2 {
+			color: #4ba13f !important;
+			font-weight: bolder;
+		}
+	</style>
 </head>
-<body>
+<body style="font-size:18px;">
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
-	<div class="container">
+	<div class="container text-center">
+		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg" class="hidden-xs hidden-sm"
+		     style="float:left;width: 100px;height:150px;margin: 40px 0 0 0">
+		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg" class="hidden-xs hidden-sm"
+		     style="float:right;width: 100px;height:150px;margin: 40px 0 0 0; visibility: hidden;">
 		<h1>Node.js og MongoDB</h1>
 
-		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg"
-		     style="float:left;widht 100px;height:150px;margin-right: 40px;">
-
 		<p>
-			Kunne du tænke dig et foredrag om Node.js eller MongoDB, baseret på flere års praktisk erfaring disse
-			teknologier?</p>
-
-		<p>
-			Så skulle du måske <a href="mailto:allan@878.dk">sende mig en email</a>. Se udpluk af foredrag nedenfor.
+			foredrag om Node.js eller MongoDB, baseret på praktiske erfaringer?
 		</p>
 
-		<p>
-			Foredragene bliver holdt af <a href="http://www.linkedin.com/in/ebdrup">Allan Ebdrup</a>
+		<p class="text-center">
+			<a class="btn btn-success btn-lg" href="mailto:allan@878.dk">send mig en email</a>
 		</p>
 	</div>
 </div>
 
+
 <div class="container">
+	<h1>Foredrag
+
+		<small>af <a href="http://www.linkedin.com/in/ebdrup">Allan Ebdrup</a></small>
+	</h1>
 	<div class="row">
 		<div class="col-md-6">
 			<h2>Node.js</h2>
@@ -122,13 +132,42 @@
 			</p>
 		</div>
 		<div class="col-md-6">
-			<h2>Vil du se noget kode?</h2>
+		</div>
+	</div>
+	<hr>
+	<h1>Generelt
+	</h1>
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Om Allan Ebdrup</h2>
 
-			<h3>Html2pdf.it</h3>
+			<p>Hvis du vil vide lidt mere om mig, kan du se detaljer om min professionelle karriere på <a
+					href="http://www.linkedin.com/in/ebdrup">LinkedIn</a>
+			</p>
+
+			<p>Jeg elsker teknologi, jeg elsker web-basered løsninger og jeg elsker at holde tingene så simple som
+				mulige.
+			</p>
 
 			<p>
-				<a href="http://html2pdf.it">Html2pdf.it</a> er en opensource løsning til at konvereter en web-side til
-				en PDF.
+				Mine foredrag et tekniske, men slet ikke højpandede. Foredragene giver en basal introduktion, og de er
+				krydret med praktiske tommelfinger-regler, historier om lige dele brændte naller og flotte resultater.
+			</p>
+
+			<p>Når du har været til et af mine foredrag, er du godt klædt på til at kaste dig ud i egne eksperimenter
+				med de teknologier du har hørt om. Du vil have en forståelse for muligheder og begrænsninger. Og du vil
+				være opmærksom på faldgruber, der ellers ville koste dig dyrt at falde i.
+				Men mest af alt, er du blevet endnu mere nysgerrig.
+			</p>
+		</div>
+		<div class="col-md-6">
+			<h2>Vil du se noget kode?</h2>
+
+			<h3>html2pdf.it</h3>
+
+			<p>
+				<a href="http://html2pdf.it">html2pdf.it</a> er en opensource løsning til at konvereter en web-side til
+				en PDF. Teknologien er Node.js.
 				<a href="https://github.com/Muscula/html2pdf.it">Sourcekoden</a> ligger på github.
 			</p>
 
@@ -136,7 +175,6 @@
 
 			<p>
 				Jeg har lagt nogle opensource <a href="https://github.com/Muscula?tab=repositories">node.js moduler</a>
-				jeg har lavet på
 				github.
 			</p>
 
@@ -144,7 +182,7 @@
 
 			<p>
 				Jeg har bygget en løsning til at <a href="http://muscula.com">logge JavaScript fejl</a> på dit website i
-				produktion, der bliver brugt af millioner af mennesker hver eneste dag.
+				produktion. Muscula bliver brugt af millioner af mennesker hver eneste dag.
 			</p>
 
 		</div>
