@@ -31,11 +31,12 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
 	<div class="container text-center">
-		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg" class="hidden-xs hidden-sm"
+		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg" class="hidden-xs hidden-sm img-rounded"
 		     style="float:left;width: 100px;height:150px;margin: 40px 0 0 0">
-		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg" class="hidden-xs hidden-sm"
+		<img src="http://www.muscula.com/static/img/AllanEbdrup.jpg" class="hidden-xs hidden-sm img-rounded"
 		     style="float:right;width: 100px;height:150px;margin: 0 0 40px 0; visibility: hidden;">
-		<h1>Node.js og MongoDB</h1>
+		<h1><span data-scroll-reveal="move 50px enter left over 1s no reset">Node.js</span> og
+			<span data-scroll-reveal="move 50px enter right over 1s no reset">MongoDB</span></h1>
 
 		<p>
 			foredrag om Node.js eller MongoDB, baseret på praktiske erfaringer?
@@ -50,7 +51,6 @@
 
 <div class="container">
 	<h1>Foredrag
-
 		<small>af <a href="http://www.linkedin.com/in/ebdrup">Allan Ebdrup</a></small>
 	</h1>
 	<div class="row">
@@ -71,10 +71,12 @@
 			</p>
 			<ul>
 				<li>Hvorfor valgte vi Node.js?</li>
-				<li>Vedligeholdelsesvenlig kode</li>
 				<li>Introduktion til Node.js web-frameworket express</li>
-				<li>Monkey patching brugt i praksis</li>
+				<li>Monkey patching brugt i praksis (Det gør du kun i et dynamisk sprog som JavaScript)</li>
+				<li>"Node filososofien", om små genbrugelige moduler</li>
+				<li>Hvordan evnts of streams gennemsyrer udvikling i Node.js</li>
 				<li>Den logiske arkitektur og designvalg vi har taget i vores forretningslogik i Node.js</li>
+				<li>Vedligeholdelsesvenlig kode og arkitektur (micro services)</li>
 				<li>Hvorfor låste vores servere fuldstændig, og svarede ikke?</li>
 			</ul>
 			<p>
@@ -129,7 +131,7 @@
 			<ul>
 				<li>Hvordan vi skriver tests, test struktur</li>
 				<li>En gennemgang af de mange tools vi bruger, de fleste af dem open source</li>
-				<li>Nogle processer der virker for os</li>
+				<li>Processer der virker for os</li>
 			</ul>
 			<p>
 				Udgangspunktet for hele foredraget er vores praktiske erfaringer, hvad vi har lært, hvad der virker for
@@ -141,8 +143,6 @@
 		</div>
 	</div>
 	<hr>
-	<h1>Generelt
-	</h1>
 	<div class="row">
 		<div class="col-md-6">
 			<h2>Om Allan Ebdrup</h2>
@@ -202,9 +202,22 @@
 
 	<hr>
 
-	<footer>
+	<footer data-scroll-reveal="move 50px enter left over 1s no reset">
 		<p>&copy; Allan Ebdrup. <a href="mailto:allan@878.dk">allan@878.dk</a>, skype: allanebdrup</p>
 	</footer>
+
+
+	<script src="js/scrollReveal.min.js?ver=0.2.0-rc.1"></script>
+
+	<script type="text/javascript">
+		(function($) {
+
+			'use strict';
+
+			window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+		})();
+	</script>
+
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
