@@ -24,6 +24,11 @@ handlers:
   secure: optional
   expiration: 2000d
 
+- url: /img
+  static_dir: static/img
+  secure: optional
+  expiration: 2000d
+
 - url: .*
   static_files: static/index.html
   upload: static/(.*) 
