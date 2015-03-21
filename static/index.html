@@ -94,17 +94,21 @@
 	</p>
 
 	<div class="text-center" style="margin: 26px 0 16px 0">
-		<div id="ytapiplayer2" style="display:none;">
-		</div>
 		<div id="playButtonContainer" style="position: absolute; left: 50%;">
-			<div style="position: relative; left: -50%;">
+			<div style="position: relative; left: -50%;z-index: 10;">
 				<div id="playButton">
 				</div>
 			</div>
 		</div>
-		<img id="videoImage"
-		     src="/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg" class="img-rounded"
-		     style="width: 640px;height:359px"><br>
+		<div id="videoImageContainer" style="position: absolute; left: 50%;">
+			<div style="position: relative; left: -50%;z-index: 0;">
+				<img id="videoImage"
+				     src="/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg" class="img-rounded"
+				     style="width: 640px;height:359px">
+			</div>
+		</div>
+		<div id="ytapiplayer2" style="height:365px; margin:-3px;">
+		</div>
 		<em>Continuous Delivery warstories - foredrag til <a href="http://www.meetup.com/AgilityLab/">AgilityLab</a>
 			meetup</em>
 
@@ -504,8 +508,8 @@
 					.append(
 					'<iframe width="640" height="359" src="http://www.youtube.com/embed/ULpFUq4kV4I?autoplay=1" ' +
 					'frameborder="0" allowfullscreen></iframe>');
-			$('#videoImage').hide();
-			$('#playButtonContainer').hide();
+			$('#videoImage').fadeOut(1000);
+			$('#playButtonContainer').fadeOut(1000);
 			playdone = true;
 		}
 	</script>
