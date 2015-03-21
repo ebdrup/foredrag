@@ -504,11 +504,10 @@
 				return;
 			}
 			$('#ytapiplayer2')
-					.show()
 					.append(
 					'<iframe width="640" height="359" src="http://www.youtube.com/embed/ULpFUq4kV4I?autoplay=1" ' +
 					'frameborder="0" allowfullscreen></iframe>');
-			$('#videoImage').fadeOut(1000);
+			$('#videoImageContainer').fadeOut(1000);
 			$('#playButtonContainer').fadeOut(1000);
 			playdone = true;
 		}
