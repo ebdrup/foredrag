@@ -1,0 +1,31 @@
+{
+  "name": "itforedrag",
+  "version": "1.0.0",
+  "description": "itforedrag.dk",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muscula/hubaudit"
+  },
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/muscula/hubaudit/issues"
+  },
+  "homepage": "https://github.com/muscula/hubaudit",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0",
+    "mocha-jshint": "^0.0.9"
+  },
+  "dependencies": {
+    "compression": "^1.4.3",
+    "express": "^4.12.2"
+  }
+}
