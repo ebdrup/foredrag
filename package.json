@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/muscula/hubaudit"
+    "url": "https://github.com/ebdrup/foredrag"
   },
   "license": "None",
   "bugs": {
-    "url": "https://github.com/muscula/hubaudit/issues"
+    "url": "https://github.com/ebdrup/foredrag/issues"
   },
-  "homepage": "https://github.com/muscula/hubaudit",
+  "homepage": "http://itforedrag.dk",
   "devDependencies": {
     "chai": "^1.10.0",
     "mocha": "^2.1.0",
