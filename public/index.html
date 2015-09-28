@@ -60,6 +60,10 @@
 		#playButton:hover {
 			opacity: 0.4;
 		}
+		#emailButton{
+			z-index:10;
+			position:relative;
+		}
 	</style>
 </head>
 <body style="font-size:18px;">
@@ -82,8 +86,8 @@
 			foredrag baseret på praktiske erfaringer
 		</p>
 
-		<p class="text-center">
-			<a class="btn btn-success btn-lg" style="font-size:22px;font-weight:100; letter-spacing: 2px;"
+		<p id="emailButtonContainer" class="text-center">
+			<a id="emailButton" class="btn btn-success btn-lg" style="font-size:22px;font-weight:100; letter-spacing: 2px;"
 			   href="mailto:allan@itforedrag.dk?subject=Ang. foredrag">send en mail</a>
 		</p>
 	</div>
@@ -545,9 +549,9 @@
 		}
 	</script>
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins)
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
--->
+<script src="/js/pixi.min.js"></script>
+<script src="/js/pixi-particles.min.js"></script>
+<script src="/js/sparks.js"></script>
 </body>
 </html>
 
