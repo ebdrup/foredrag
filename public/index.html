@@ -22,7 +22,7 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -56,7 +56,12 @@
 			-webkit-box-decoration-break: clone;
 			box-decoration-break: clone;
 		}
-
+		@media (max-width: 767px) {
+			.small-xs {
+				zoom: 0.5;
+				-moz-transform: scale(0.5);
+			}
+		}
 		#playButton:hover {
 			opacity: 0.4;
 		}
@@ -116,7 +121,7 @@
 		og som åbne arrangementer, fx <b>i medlems-organisationer</b> inden for IT-branchen.
 	</p>
 
-	<div class="text-center" style="margin: 26px 0 16px 0">
+	<div class="small-xs text-center" style="margin: 26px 0 16px 0">
 		<div id="playButtonContainer" style="position: absolute; left: 50%;">
 			<div style="position: relative; left: -50%;z-index: 10;">
 				<div id="playButton">
@@ -222,7 +227,7 @@
 				info...</a>
 		</div>
 	</div>
-	<div class="text-center" style="margin: 26px 0 16px 0">
+	<div class="small-xs text-center" style="margin: 26px 0 16px 0">
 		<em>Foto taget under god diskussion</em><br>
 		<img
 				src="/img/everyone-enjoys.jpg" class="img-rounded"
@@ -395,196 +400,200 @@
 
 	<hr>
 	<h3>Foredragskalender</h3>
-	<table class="table table-striped">
-		<thead>
-		<tr>
-			<th>Dato</th>
-			<th>Sted</th>
-			<th>Titel på foredrag (klik for detaljer og tilmelding)</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-			<td>7. Oktober 2015</td>
-			<td>CoDe-conf København</td>
-			<td>
-				<a href="http://www.code-conf.com/"
-						>Continuous Delivery Warstories (C-level condensed english version)</a></td>
-		</tr>
-		<tr>
-			<td>5. Oktober 2015</td>
-			<td>GOTO København</td>
-			<td>
-				<a href="http://gotocon.com/cph-2015/presentation/Continuous%20Delivery%20warstories"
+
+	<div class="table-responsive">
+		<table class="small-xs table table-striped">
+			<thead>
+			<tr>
+				<th>Dato</th>
+				<th>Sted</th>
+				<th>Titel på foredrag (klik for detaljer og tilmelding)</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>7. Oktober 2015</td>
+				<td>CoDe-conf København</td>
+				<td>
+					<a href="http://www.code-conf.com/"
+							>Continuous Delivery Warstories (C-level condensed english version)</a></td>
+			</tr>
+			<tr>
+				<td>5. Oktober 2015</td>
+				<td>GOTO København</td>
+				<td>
+					<a href="http://gotocon.com/cph-2015/presentation/Continuous%20Delivery%20warstories"
+							>Continuous Delivery Warstories (condensed english version)</a></td>
+			</tr>
+			<tr>
+				<td>16. September 2015</td>
+				<td>København</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=572&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=2aa635fcf22827f52bb7be08748337a6"
+							>Continuous Delivery Warstories</a>
+				</td>
+			</tr>
+			<tr>
+				<td>26. Aug 2015</td>
+				<td>Odense</td>
+				<td>
+					Continuous Delivery Warstories (lukket arrangement)
+				</td>
+			</tr>
+			<tr>
+				<td>21. Maj 2015</td>
+				<td>Ålborg</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=438&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=418f99d476c9e51607e3b4672f138c71"
+							>Continuous Delivery Warstories</a></td>
+			</tr>
+			<tr>
+				<td>30. April 2015</td>
+				<td>Aarhus</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=376&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=0bd15eb7ec377d9bbc41d9f2023c087c"
+							>Node.js Warstories</a></td>
+			</tr>
+			<!--
+			<tr>
+				<td>29. April 2015</td>
+				<td>CoDe-conf Oslo</td>
+				<td>
+					<a href="http://www.code-conf.com/"
+							>Continuous Delivery Warstories (condensed english version)</a></td>
+			</tr>
+			-->
+			<tr>
+				<td>26. Marts 2015</td>
+				<td>Aarhus</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=374&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=f1676f0d3954abacea239b0435149c1f"
+							>Continuous Delivery Warstories</a></td>
+			</tr>
+			<tr>
+				<td>17. Marts 2015</td>
+				<td>Vejle</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=373&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=eedd8d50ff5791906ad3566fa6fc0c54"
+							>Continuous Delivery Warstories</a></td>
+			</tr>
+			<tr>
+				<td>9. Marts 2015</td>
+				<td>Odense</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=372&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=37b55891460e896f81c30dc3b7f52f5a"
+							>Continuous Delivery Warstories</a></td>
+			</tr>
+			<tr>
+				<td>4. Marts 2015</td>
+				<td>København</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=413&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=5319d8646827a650be7c60382158a1e9"
+							>MongoDB Warstories</a></td>
+			</tr>
+			<tr>
+				<td>15. Jan 2015</td>
+				<td>København</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=408&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=4f924f8959aa22c273fd7c34f12c1b1c"
+							>Node.js Warstories</a></td>
+			</tr>
+			<tr>
+				<td>14. Jan 2015</td>
+				<td>København</td>
+				<td><a href="http://www.meetup.com/AgilityLab/events/216548902/"
 						>Continuous Delivery Warstories (condensed english version)</a></td>
-		</tr>
-		<tr>
-			<td>16. September 2015</td>
-			<td>København</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=572&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=2aa635fcf22827f52bb7be08748337a6"
-						>Continuous Delivery Warstories</a>
-			</td>
-		</tr>
-		<tr>
-			<td>26. Aug 2015</td>
-			<td>Odense</td>
-			<td>
-				Continuous Delivery Warstories (lukket arrangement)
-			</td>
-		</tr>
-		<tr>
-			<td>21. Maj 2015</td>
-			<td>Ålborg</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=438&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=418f99d476c9e51607e3b4672f138c71"
-						>Continuous Delivery Warstories</a></td>
-		</tr>
-		<tr>
-			<td>30. April 2015</td>
-			<td>Aarhus</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=376&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=0bd15eb7ec377d9bbc41d9f2023c087c"
-						>Node.js Warstories</a></td>
-		</tr>
-		<!--
-		<tr>
-			<td>29. April 2015</td>
-			<td>CoDe-conf Oslo</td>
-			<td>
-				<a href="http://www.code-conf.com/"
-						>Continuous Delivery Warstories (condensed english version)</a></td>
-		</tr>
-		-->
-		<tr>
-			<td>26. Marts 2015</td>
-			<td>Aarhus</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=374&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=f1676f0d3954abacea239b0435149c1f"
-						>Continuous Delivery Warstories</a></td>
-		</tr>
-		<tr>
-			<td>17. Marts 2015</td>
-			<td>Vejle</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=373&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=eedd8d50ff5791906ad3566fa6fc0c54"
-						>Continuous Delivery Warstories</a></td>
-		</tr>
-		<tr>
-			<td>9. Marts 2015</td>
-			<td>Odense</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=372&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=37b55891460e896f81c30dc3b7f52f5a"
-						>Continuous Delivery Warstories</a></td>
-		</tr>
-		<tr>
-			<td>4. Marts 2015</td>
-			<td>København</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=413&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=5319d8646827a650be7c60382158a1e9"
-						>MongoDB Warstories</a></td>
-		</tr>
-		<tr>
-			<td>15. Jan 2015</td>
-			<td>København</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=408&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=4f924f8959aa22c273fd7c34f12c1b1c"
-						>Node.js Warstories</a></td>
-		</tr>
-		<tr>
-			<td>14. Jan 2015</td>
-			<td>København</td>
-			<td><a href="http://www.meetup.com/AgilityLab/events/216548902/"
-					>Continuous Delivery Warstories (condensed english version)</a></td>
-		</tr>
-		<tr>
-			<td>20. November 2014</td>
-			<td>Datalog-foreningen (Aarhus)</td>
-			<td>MongoDB Warstories</td>
-		</tr>
-		<tr>
-			<td>16. Oktober 2014</td>
-			<td>Aarhus</td>
-			<td>
-				<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=194&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=ce79dc471eda2dbf376974e7aee18c76"
-						>MongoDB Warstories</a></td>
-		</tr>
-		<tr>
-			<td>2. Oktober 2014</td>
-			<td>Datalog-foreningen (Aarhus)</td>
-			<td>
-				<a href="http://www.datalogforeningen.dk/index.php/news/39/15/Faglig-Aften-d-2-oktober-2014-Node-js-warstories"
-						>Node.js Warstories</a></td>
-		</tr>
-		<tr>
-			<td>12. Juni 2014</td>
-			<td>Official MongoDB usergroup (Stockholm)</td>
-			<td><a href="http://www.meetup.com/Stockholm-MongoDB-User-Group/events/184327682/"
-					>MongoDB Warstories (condensed english version)</a></td>
-		</tr>
-		<tr>
-			<td>20. Maj 2014</td>
-			<td>GOTO Nights (Kbh)</td>
-			<td><a href="https://secure.trifork.com/cph-2014/freeevent/index.jsp?eventOID=6205">Node.js Warstories</a>
-			</td>
-		</tr>
-		<tr>
-			<td>20. Marts 2014</td>
-			<td>Odense</td>
-			<td>MongoDB Warstories</td>
-		</tr>
-		<tr>
-			<td>13. Marts 2014</td>
-			<td>Odense</td>
-			<td>Node.js Warstories</td>
-		</tr>
-		<tr>
-			<td>4. Marts 2014</td>
-			<td>Vejle</td>
-			<td>MongoDB Warstories</td>
-		</tr>
-		<tr>
-			<td>27. Februar 2014</td>
-			<td>Vejle</td>
-			<td>Node.js Warstories</td>
-		</tr>
-		<tr>
-			<td>4. Februar 2014</td>
-			<td>Ålborg</td>
-			<td>MongoDB Warstories</td>
-		</tr>
-		<tr>
-			<td>23. Oktober 2013</td>
-			<td>Tech Talent Night - DTU (Kbh)</td>
-			<td><a href="https://www.facebook.com/events/623608751022985/">MongoDB Warstories</a></td>
-		</tr>
-		<tr>
-			<td>12. September 2013</td>
-			<td>Aarhus</td>
-			<td>Node.js Warstories</td>
-		</tr>
-		<tr>
-			<td>3. September 2013</td>
-			<td>Ålborg</td>
-			<td><a href="http://www.geekhub.dk/meetings/358">Node.js og kunsten at vedligeholde 1,2 mio. linjer
-				JavaScript</a></td>
-		</tr>
-		<tr>
-			<td>12. Marts 2013</td>
-			<td>GOTO Nights (Kbh)</td>
-			<td><a href="https://secure.trifork.com/aarhus-2013/freeevent/index.jsp?eventOID=5245">Sådan bliver 1
-				million
-				linjer JavaScript-kode nemme at vedligeholde</a></td>
-		</tr>
-		<tr>
-			<td>16. Aug 2012</td>
-			<td>CopenhagenJS (Kbh)</td>
-			<td><a href="http://lanyrd.com/2012/copenhagenjs-august/">Quality in JavaScript code (browser and
-				node.js)</a>
-			</td>
-		</tr>
-		</tbody>
-	</table>
+			</tr>
+			<tr>
+				<td>20. November 2014</td>
+				<td>Datalog-foreningen (Aarhus)</td>
+				<td>MongoDB Warstories</td>
+			</tr>
+			<tr>
+				<td>16. Oktober 2014</td>
+				<td>Aarhus</td>
+				<td>
+					<a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=194&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=ce79dc471eda2dbf376974e7aee18c76"
+							>MongoDB Warstories</a></td>
+			</tr>
+			<tr>
+				<td>2. Oktober 2014</td>
+				<td>Datalog-foreningen (Aarhus)</td>
+				<td>
+					<a href="http://www.datalogforeningen.dk/index.php/news/39/15/Faglig-Aften-d-2-oktober-2014-Node-js-warstories"
+							>Node.js Warstories</a></td>
+			</tr>
+			<tr>
+				<td>12. Juni 2014</td>
+				<td>Official MongoDB usergroup (Stockholm)</td>
+				<td><a href="http://www.meetup.com/Stockholm-MongoDB-User-Group/events/184327682/"
+						>MongoDB Warstories (condensed english version)</a></td>
+			</tr>
+			<tr>
+				<td>20. Maj 2014</td>
+				<td>GOTO Nights (Kbh)</td>
+				<td><a href="https://secure.trifork.com/cph-2014/freeevent/index.jsp?eventOID=6205">Node.js
+					Warstories</a>
+				</td>
+			</tr>
+			<tr>
+				<td>20. Marts 2014</td>
+				<td>Odense</td>
+				<td>MongoDB Warstories</td>
+			</tr>
+			<tr>
+				<td>13. Marts 2014</td>
+				<td>Odense</td>
+				<td>Node.js Warstories</td>
+			</tr>
+			<tr>
+				<td>4. Marts 2014</td>
+				<td>Vejle</td>
+				<td>MongoDB Warstories</td>
+			</tr>
+			<tr>
+				<td>27. Februar 2014</td>
+				<td>Vejle</td>
+				<td>Node.js Warstories</td>
+			</tr>
+			<tr>
+				<td>4. Februar 2014</td>
+				<td>Ålborg</td>
+				<td>MongoDB Warstories</td>
+			</tr>
+			<tr>
+				<td>23. Oktober 2013</td>
+				<td>Tech Talent Night - DTU (Kbh)</td>
+				<td><a href="https://www.facebook.com/events/623608751022985/">MongoDB Warstories</a></td>
+			</tr>
+			<tr>
+				<td>12. September 2013</td>
+				<td>Aarhus</td>
+				<td>Node.js Warstories</td>
+			</tr>
+			<tr>
+				<td>3. September 2013</td>
+				<td>Ålborg</td>
+				<td><a href="http://www.geekhub.dk/meetings/358">Node.js og kunsten at vedligeholde 1,2 mio. linjer
+					JavaScript</a></td>
+			</tr>
+			<tr>
+				<td>12. Marts 2013</td>
+				<td>GOTO Nights (Kbh)</td>
+				<td><a href="https://secure.trifork.com/aarhus-2013/freeevent/index.jsp?eventOID=5245">Sådan bliver 1
+					million
+					linjer JavaScript-kode nemme at vedligeholde</a></td>
+			</tr>
+			<tr>
+				<td>16. Aug 2012</td>
+				<td>CopenhagenJS (Kbh)</td>
+				<td><a href="http://lanyrd.com/2012/copenhagenjs-august/">Quality in JavaScript code (browser and
+					node.js)</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
 
 	<footer data-scroll-reveal="move 50px enter left over 1s no reset">
 		<p>&copy; Allan Ebdrup. <a href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>, skype: allanebdrup, mob:
