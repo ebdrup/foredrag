@@ -48,7 +48,7 @@
 			font-weight: 200;
 		}
 
-		#playButton {
+		#playButton,#playButton2 {
 			width: 640px;
 			height: 359px;
 			z-index: 10;
@@ -68,7 +68,7 @@
 			}
 		}
 
-		#playButton:hover {
+		#playButton:hover, #playButton2:hover {
 			opacity: 0.4;
 		}
 
@@ -126,7 +126,6 @@
 		Foredragene er velegnede til både lukkede arrangementer for <b>medarbejderne i din virksomhed</b>,
 		og som åbne arrangementer, fx <b>i medlems-organisationer</b> inden for IT-branchen.
 	</p>
-
 	<div class="small-xs text-center" style="margin: 26px 0 16px 0">
 		<div id="playButtonContainer" style="position: absolute; left: 50%;">
 			<div style="position: relative; left: -50%;z-index: 10;">
@@ -136,16 +135,15 @@
 		</div>
 		<div id="videoImageContainer" style="position: absolute; left: 50%;">
 			<div style="position: relative; left: -50%;z-index: 0;">
-				<img id="videoImage"
-				     src="/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg" class="img-rounded"
-				     style="width: 640px;height:359px">
+				<img id="videoImage2"
+				     src="/img/goto.jpg" class="img-rounded"
+				     style="width: 599px;height:400px">
 			</div>
 		</div>
-		<div id="ytapiplayer2" style="height:365px; margin:-3px;">
+		<div id="ytapiplayer2" style="height:410px; margin:-3px;">
 		</div>
-		<em>Continuous Delivery Warstories - foredrag til <a href="http://www.meetup.com/AgilityLab/">AgilityLab</a>
-			meetup</em>
-
+		<em>Continuous Delivery Warstories - GOTO konference Kbh</em><br>
+		<em>Foto: <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse</a></em>
 	</div>
 
 	<div class="row">
@@ -234,18 +232,25 @@
 		</div>
 	</div>
 	<div class="small-xs text-center" style="margin: 26px 0 16px 0">
-		<img
-				src="/img/goto.jpg" class="img-rounded"
-				style="width: 599px;height:400px"><br>
-		<em>Continuous Delivery Warstories - GOTO konference Kbh</em><br>
-		<em>Foto: <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse</a></em>
-	</div>
-	<div class="small-xs text-center" style="margin: 26px 0 16px 0">
-		<img
-				src="/img/goto2.jpg" class="img-rounded"
-				style="width: 512px;height:342px"><br>
-		<em>Continuous Delivery Warstories - GOTO konference Kbh</em><br>
-		<em>Foto: <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse</a></em>
+		<div id="playButtonContainer2" style="position: absolute; left: 50%;">
+			<div style="position: relative; left: -50%;z-index: 10;">
+				<div id="playButton2">
+				</div>
+			</div>
+		</div>
+		<div id="videoImageContainer2" style="position: absolute; left: 50%;">
+			<div style="position: relative; left: -50%;z-index: 0;">
+				<img id="videoImage2"
+				     src="/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg" class="img-rounded"
+				     style="width: 640px;height:359px">
+			</div>
+		</div>
+		<div id="ytapiplayer2-2" style="height:365px; margin:-3px;">
+		</div>
+		<em>Continuous Delivery Warstories - foredrag til <a href="http://www.meetup.com/AgilityLab/">AgilityLab</a>
+			meetup<br />
+			Dette var første gang dette foredrag blev holdt - se udviklingen i forhold til videoen fra GOTO</em>
+
 	</div>
 	<div class="row">
 		<div class="col-md-6">
@@ -323,15 +328,6 @@
 			   href="mailto:allan@itforedrag.dk?subject=Spørgsmål ang. foredraget: REST API Warstories">spørg om mere
 				info...</a>
 		</div>
-	</div>
-	<div class="small-xs text-center" style="margin: 26px 0 16px 0">
-		<em>Foto taget under god diskussion</em><br>
-		<img
-				src="/img/everyone-enjoys.jpg" class="img-rounded"
-				style="width: 495px;height:409px"><br>
-		<em>Continuous Delivery Warstories - foredrag hos PROSA Kbh</em><br>
-		<em>Foto: <a href="https://www.linkedin.com/profile/view?id=AAkAAAHA8aQB85wZTTvPiX2IwyCgW1pcoKFtABI">Larsen Egil
-			Rød</a></em>
 	</div>
 	<hr>
 	<div class="row">
@@ -628,6 +624,8 @@
 		window.scrollReveal = new scrollReveal({reset: true, move: '50px'});
 		$('#videoImage').click(playVideo);
 		$('#playButton').click(playVideo);
+		$('#videoImage2').click(playVideo2);
+		$('#playButton2').click(playVideo2);
 		var playdone = false;
 		function playVideo() {
 			if (playdone) {
@@ -635,11 +633,23 @@
 			}
 			$('#ytapiplayer2')
 					.append(
-					'<iframe width="640" height="359" src="http://www.youtube.com/embed/ULpFUq4kV4I?autoplay=1" ' +
-					'frameborder="0" allowfullscreen></iframe>');
+							'<iframe width="640" height="359" src="http://www.youtube.com/embed/pZ--Tkbop40?autoplay=1" ' +
+							'frameborder="0" allowfullscreen></iframe>');
 			$('#videoImageContainer').fadeOut(1000);
 			$('#playButtonContainer').fadeOut(1000);
 			playdone = true;
+		}
+		function playVideo2() {
+			if (playdone2) {
+				return;
+			}
+			$('#ytapiplayer2-2')
+					.append(
+							'<iframe width="640" height="359" src="http://www.youtube.com/embed/ULpFUq4kV4I?autoplay=1" ' +
+							'frameborder="0" allowfullscreen></iframe>');
+			$('#videoImageContainer2').fadeOut(1000);
+			$('#playButtonContainer2').fadeOut(1000);
+			playdone2 = true;
 		}
 	</script>
 </div>
