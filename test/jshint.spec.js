@@ -1,1 +1,4 @@
-require('mocha-jshint')();
+require('mocha-eslint')([
+	'./*.js',
+	'./test/**/*.js'
+]);
