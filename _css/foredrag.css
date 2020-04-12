@@ -1,0 +1,48 @@
+body,
+html {
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #777 !important;
+  font-weight: bolder;
+}
+
+h2 {
+  color: #4ba13f !important;
+  font-weight: bolder;
+}
+
+body {
+  font-weight: 200;
+}
+
+#playButton,
+#playButton2 {
+  width: 640px;
+  height: 359px;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  cursor: pointer;
+  background-image: url('/img/play.png');
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@media (max-width: 767px) {
+  .small-xs {
+    zoom: 0.5;
+  }
+}
+
+#playButton2:hover,
+#playButton:hover {
+  opacity: 0.4;
+}
+
+#emailButton {
+  z-index: 10;
+  position: relative;
+}

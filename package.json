@@ -15,7 +15,7 @@
     "eslint:fix": "eslint --fix . || echo Unfixable errors were ignored and should be caught by the tests",
     "prettier:write": "prettier --loglevel warn --write \"**/*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)\"",
     "format": "npm run eslint:fix && npm run prettier:write",
-    "download": "curl -sS -o _includes/bootstrap.css https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css && curl -sS -o _includes/jquery.js https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+    "download": "curl -sS -o _includes/bootstrap.css https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css && curl -sS -o _includes/jquery.min.js https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
   },
   "husky": {
     "hooks": {
@@ -43,7 +43,8 @@
     "@11ty/eleventy": "0.10.0",
     "html-minifier": "4.0.0",
     "nunjucks": "3.2.1",
-    "purify-css": "1.2.5"
+    "purify-css": "1.2.5",
+    "terser": "4.6.11"
   },
   "devDependencies": {
     "@practio/eslint-config-practio": "7.1.0",

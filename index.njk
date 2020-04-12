@@ -22,59 +22,8 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
-    <style>
-      {{ "bootstrap.css" | purifyCss | safe }}
-    </style>
-    <style>
-      body,
-      html {
-        overflow-x: hidden;
-      }
-
-      h1 {
-        color: #777 !important;
-        font-weight: bolder;
-      }
-
-      h2 {
-        color: #4ba13f !important;
-        font-weight: bolder;
-      }
-
-      body {
-        font-weight: 200;
-      }
-
-      #playButton,
-      #playButton2 {
-        width: 640px;
-        height: 359px;
-        z-index: 10;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.6;
-        cursor: pointer;
-        background-image: url("/img/play.png");
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-      }
-
-      @media (max-width: 767px) {
-        .small-xs {
-          zoom: 0.5;
-        }
-      }
-
-      #playButton2:hover,
-      #playButton:hover {
-        opacity: 0.4;
-      }
-
-      #emailButton {
-        z-index: 10;
-        position: relative;
-      }
-    </style>
+    {{ "_includes/bootstrap.css" | purifyCss | safe }}
+    {{ "_css/foredrag.css" | purifyCss | safe }}
   </head>
 
   <body style="font-size: 18px;">
@@ -619,41 +568,8 @@
           <a href="https://twitter.com/allanebdrup">allanebdrup</a>
         </p>
       </footer>
-
-      {% set jquery %}
-      {% include "jquery.js" %}
-      {% endset %}
-      <script>
-        {{jquery | safe}}
-      </script>
-      <script type="text/javascript">
-        $('#videoImage').click(playVideo);
-        $('#playButton').click(playVideo);
-        $('#videoImage2').click(playVideo2);
-        $('#playButton2').click(playVideo2);
-        var playdone = false;
-        var playdone2 = false;
-
-        function playVideo() {
-          if (playdone) {
-            return;
-          }
-          $('#ytapiplayer2').append('<iframe width="640" height="359" src="https://www.youtube.com/embed/pZ--Tkbop40?autoplay=1" ' + 'frameborder="0" allowfullscreen></iframe>',);
-          $('#videoImageContainer').fadeOut(1000);
-          $('#playButtonContainer').fadeOut(1000);
-          playdone = true;
-        }
-
-        function playVideo2() {
-          if (playdone2) {
-            return;
-          }
-          $('#ytapiplayer2-2').append('<iframe width="640" height="359" src="https://www.youtube.com/embed/ULpFUq4kV4I?autoplay=1" ' + 'frameborder="0" allowfullscreen></iframe>',);
-          $('#videoImageContainer2').fadeOut(1000);
-          $('#playButtonContainer2').fadeOut(1000);
-          playdone2 = true;
-        }
-      </script>
+      {{ '_includes/jquery.min.js' | load | script | safe }}
+      {{ '_js/playVideo.js' | load | jsmin | script | safe }}
     </div>
   </body>
 </html>
