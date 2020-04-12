@@ -41,6 +41,7 @@
   "homepage": "http://itforedrag.dk",
   "dependencies": {
     "@11ty/eleventy": "0.10.0",
+    "eleventy-plugin-lazyimages": "1.1.1",
     "html-minifier": "4.0.0",
     "nunjucks": "3.2.1",
     "purify-css": "1.2.5",
