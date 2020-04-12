@@ -629,18 +629,21 @@
       </div>
 
       <footer>
+        <p class="text-center small">
+          <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
+          <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
+          <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
+          <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
+        </p>
         <p>
-          &copy; Allan Ebdrup.
-         <p class="text-center small">
-            <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-            <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
-            <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-            <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-          </p>
+          &copy; Allan Ebdrup.    
         </p>
       </footer>
-      {{ '_includes/jquery.min.js' | load | script | safe }}
-      {{ '_js/playVideo.js' | load | jsmin | script | safe }}
+
     </div>
+
+    {{ '_includes/jquery.min.js' | load | script | safe }}
+    {{ '_js/playVideo.js' | load | jsmin | script | safe }}
+
   </body>
 </html>
