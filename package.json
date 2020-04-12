@@ -5,11 +5,30 @@
   "main": "server.js",
   "private": true,
   "engines": {
-    "node": "10.15.3",
-    "npm": "6.9.0"
+    "node": "^12.16.1",
+    "npm": "^6.14.4"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "rm -rf _site && eleventy",
+    "start": "npm run build && eleventy --serve",
+    "eslint:fix": "eslint --fix . || echo Unfixable errors were ignored and should be caught by the tests",
+    "prettier:write": "prettier --loglevel warn --write \"**/*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)\"",
+    "format": "npm run eslint:fix && npm run prettier:write",
+    "download": "curl -sS -o _includes/bootstrap.css https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css && curl -sS -o _includes/jquery.js https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.@(js|jsx|ts|mjs)": [
+      "eslint --fix"
+    ],
+    "*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)": [
+      "prettier --loglevel warn --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -20,16 +39,22 @@
     "url": "https://github.com/ebdrup/foredrag/issues"
   },
   "homepage": "http://itforedrag.dk",
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4",
-    "mocha-eslint": "^5.0.0"
-  },
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "helmet": "^3.18.0",
-    "httpsonly": "^1.3.0",
-    "request": "^2.88.0"
+    "clean-css": "4.2.3",
+    "html-minifier": "4.0.0",
+    "nunjucks": "3.2.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "0.10.0",
+    "@practio/eslint-config-practio": "7.1.0",
+    "@practio/prettier-config": "4.0.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.1.3",
+    "melody-idom": "1.7.1",
+    "melody-runtime": "1.7.1",
+    "mocha": "7.1.1",
+    "mocha-eslint": "6.0.0",
+    "prettier": "2.0.4",
+    "prettier-plugin-twig-melody": "0.4.2"
   }
 }
