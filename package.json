@@ -10,6 +10,7 @@
   },
   "scripts": {
     "test": "mocha",
+    "netlify-build": "eleventy",
     "build": "rm -rf _site && eleventy",
     "start": "npm run build && eleventy --serve",
     "eslint:fix": "eslint --fix . || echo Unfixable errors were ignored and should be caught by the tests",
