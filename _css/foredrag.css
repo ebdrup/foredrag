@@ -31,6 +31,23 @@ body {
   border-radius: 5px;
 }
 
+.jumbotron {
+  background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg');
+  background-size: cover;
+  background-position: 50%;
+  height: 300px;
+}
+.header-in-jumbo {
+  position: absolute;
+  top: 200px;
+  right: 0px;
+  z-index: 1;
+  display: inline-block;
+  opacity: 0.75;
+  padding: 0 5px 4px 10px;
+  background-color: #fff;
+}
+
 #playButton,
 #playButton2 {
   width: 640px;
