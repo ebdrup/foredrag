@@ -15,7 +15,7 @@
     "eslint:fix": "eslint --fix . || echo Unfixable errors were ignored and should be caught by the tests",
     "prettier:write": "prettier --loglevel warn --write \"**/*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)\"",
     "format": "npm run eslint:fix && npm run prettier:write",
-    "download": "curl -sS -o _includes/bootstrap.css https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+    "download": "curl -sS -o _includes/bootstrap.css https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css && curl -sS -o _includes/jquery.js https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
   },
   "husky": {
     "hooks": {

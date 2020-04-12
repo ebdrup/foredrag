@@ -612,7 +612,12 @@
         </p>
       </footer>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      {% set jquery %}
+      {% include "jquery.js" %}
+      {% endset %}
+      <script>
+        {{jquery | safe}}
+      </script>
       <script type="text/javascript">
         $('#videoImage').click(playVideo);
         $('#playButton').click(playVideo);
