@@ -25,22 +25,28 @@ body {
   padding: 5px 20px 5px 20px;
   color: #eee;
   background-color: #4ba13f;
-  box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
   display: inline-block;
   font-weight: 900;
   border-radius: 5px;
 }
 
 .jumbotron {
-  background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg');
   background-size: cover;
   background-position: 50%;
   height: 300px;
 }
+#jumbotron1 {
+  background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg');
+}
+
+#jumbotron2 {
+  background-image: url('/img/goto.jpg');
+}
+
 .header-in-jumbo {
-  position: absolute;
-  top: 200px;
-  right: 0px;
+  position: relative;
+  top: -120px;
   z-index: 1;
   display: inline-block;
   opacity: 0.75;
@@ -48,29 +54,10 @@ body {
   background-color: #fff;
 }
 
-#playButton,
-#playButton2 {
-  width: 640px;
-  height: 359px;
-  z-index: 10;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.6;
-  cursor: pointer;
-  background-image: url('/img/play.png');
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
 @media (max-width: 767px) {
   .small-xs {
     zoom: 0.5;
   }
-}
-
-#playButton2:hover,
-#playButton:hover {
-  opacity: 0.4;
 }
 
 .email,

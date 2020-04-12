@@ -28,7 +28,7 @@
 
   <body style="font-size: 18px;">
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron" id="jumbotron1">
       <div class="container text-center">
         <a href="/img/AllanEbdrup.jpg" download="AllanEbdrup.jpg" title="Download hi-res billede">
           <picture>
@@ -48,8 +48,8 @@
     <div class="container">
       <h2 class="header-in-jumbo">
           Foredrag baseret på praktiske erfaringer
-        </h2>
-      <h1>
+      </h2>
+      <h1 style="margin-top:-80px;">
           Continuous Delivery
           <br/>
           DevOps &amp; Udviklingsproces
@@ -61,12 +61,6 @@
           <a href="https://www.linkedin.com/in/ebdrup">Allan Ebdrup</a>
         </small>
       </h1>
-      <p class="small">
-        <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-        <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
-        <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-        <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-      </p>
       <p>
         Mine foredrag er tekniske, men slet ikke højpandede. Foredragene giver en basal introduktion, og de er krydret med praktiske tommelfinger-regler og historier om lige dele brændte naller og flotte resultater.
       </p>
@@ -81,27 +75,100 @@
         <b>i medlems-organisationer</b>
         inden for IT-branchen.
       </p>
-      <div class="small-xs text-center" style="margin: 26px 0 16px 0;">
-        <div id="playButtonContainer" style="position: absolute; left: 50%;">
-          <div style="position: relative; left: -50%; z-index: 10;">
-            <div id="playButton"></div>
+      <p class="small">
+        <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
+        <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
+        <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
+        <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
+      </p>
+
+    </div>
+    <div class="jumbotron" id="jumbotron2"></div>
+
+    <div class="container">
+      <h2 class="header-in-jumbo">
+        Foredrag om Udviklingsproces
+      </h2>
+
+      <h3 style="margin-top:-80px;">Titel: Continuous Delivery Warstories</h3>
+
+      <p>
+          Historien om, hvordan vi gik fra at release hver 14. dag, til at <b>release til produktion
+          10 gange om dagen</b> eller mere.
+        </p>
+
+      <p>
+          Vores <b>udviklingshastighed</b> var på <b>140%</b>, vi laveder <b>44% færre defects</b> i 
+          produktion og <b>omkostningerne</b> for hele udviklingsafdelingen var <b>reduceret med 50%</b>. 
+          Medarbejdertilfredsheden var i top, for vi havde lavet alle forbedringerne ved ar 
+          abejder smartere ikke hårdere.
+        </p>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="result">
+            <div class="text-xlarge">140%</div>
+            Udviklings-<br/>
+            hastighed
           </div>
         </div>
-        <div id="videoImageContainer" style="position: absolute; left: 50%;">
-          <div style="position: relative; left: -50%; z-index: 0;">
-            <picture>
-              <source srcset="/img/goto.jpg.webp" type="image/webp">
-              <img id="videoImage2" src="/img/goto.jpg" class="img-rounded" style="width: 599px; height: 400px;"/>
-            </picture>
-          </div>
+        <div class="col-md-4">
+          <div class="result">
+            <div class="text-xlarge">44%</div>
+            Færre Defekter<br/>
+            i Produktion
         </div>
-        <div id="ytapiplayer2" style="height: 410px; margin: -3px;"></div>
-        <em>Continuous Delivery Warstories - GOTO konference Kbh</em>
-        <br/>
-        <em >Foto:
-          <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse
-          </a >, Video: GOTO</em >
+        </div>
+        <div class="col-md-4">
+          <div class="result">
+            <div class="text-xlarge">50%</div>
+            Lavere<br/>
+            Omkostninger
+        </div>
+        </div>
       </div>
+
+      <ul>
+        <li>Hvad er Continuous Delivery?</li>
+        <li>Fordelene ved Continuous Delivery.</li>
+        <li>Hvordan vi kom i gang med skiftet? Hvad skulle der til, før vi tog springet?</li>
+        <li>Detaljer om, hvordan vi rent faktisk begyndte at lave Continuous Delivery.</li>
+        <li>Vores nye udviklingsproces tilpasset Continuous Delivery (bl.a. tools).</li>
+        <li>Sådan bruger vi
+            <b>versionskontrol</b>.</li>
+        <li>Sådan bruger vi
+            <b>Continuous Integration</b>.</li>
+        <li>Sådan bruger vi
+            <b>Continuous Procurement</b>.</li>
+        <li>
+            Hvad skal der til for at styre 10 udviklere, der alle push'er til produktion, så snart de er klar?
+          </li>
+        <li>
+            Den mere menneskelige faktor: Vores udviklingsfilosofi. En filosofi, der inkluderer ting som "people over process", den kompetente udvikler og DevOps.
+          </li>
+        <li>Vores ambitiøse tilgang til kvalitet og hastighed.</li>
+        <li>
+            Sådan har overgangen til Continuous Delivery påvirket kvaliteten, og hastigheden af vores daglige arbejde.
+          </li>
+      </ul>
+      <p>
+          Udgangspunktet for hele foredraget er praktiske erfaringer, hvad vi har lært, hvad der virker for os, og fejl vi har begået. Når du har hørt dette foredrag, vil du have fået en del fif til, hvordan du selv kan komme i gang med Continuous Delivery i din organisation.
+        </p>
+
+      <p>
+          Det her foredrag
+          <b>rykker noget</b>
+          i dem, der hører det. Vær forberedt på en livlig diskussion og noget at gruble over bagefter.
+        </p>
+      <a class="btn btn-default btn-sm" href="mailto:allan@itforedrag.dk?subject=Spørgsmål ang. foredraget: Continuous Delivery Warstories">spørg om mere info...
+        </a>
+
+      <h3>Video af Continuous Delivery Warstories</h3>
+      <div class="small-xs text-center" style="margin: 26px 0 16px 0;">
+        <iframe width="640" height="359" src="https://www.youtube.com/embed/pZ--Tkbop40?autoplay=1" frameborder="0" allowfullscreen></iframe><br/>
+        <em style="margin-top: -20px">Continuous Delivery Warstories - GOTO konference</em>
+      </div>
+
+      <h2>Tweets fra CoDe konferencen</h3>
       <div class="row">
         <div class="col-md-6">
           <blockquote class="twitter-tweet" data-lang="en">
@@ -261,122 +328,19 @@
         </div>
       </div>
       <hr/>
-      <div>
-        <h1>
-          Foredrags-udbud
-          <small >af
-            <a href="https://www.linkedin.com/in/ebdrup">Allan Ebdrup</a>
-          </small>
-        </h1>
-      </div>
-      <div>
-        <h2>Udviklingsproces</h2>
 
-        <h3>Titel: Continuous Delivery Warstories</h3>
-
-        <p>
-          Historien om, hvordan vi gik fra at release hver 14. dag, til at <b>release til produktion
-          10 gange om dagen</b> eller mere.
-        </p>
-
-        <p>
-          Vores <b>udviklingshastighed</b> var på <b>140%</b>, vi laveder <b>44% færre defects</b> i 
-          produktion og <b>omkostningerne</b> for hele udviklingsafdelingen var <b>reduceret med 50%</b>. 
-          Medarbejdertilfredsheden var i top, for vi havde lavet alle forbedringerne ved ar 
-          abejder smartere ikke hårdere.
-        </p>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <div class="result">
-              <div class="text-xlarge">140%</div>
-            Udviklings-<br/>
-            hastighed
-          </div>
-          </div>
-          <div class="col-md-4">
-            <div class="result">
-              <div class="text-xlarge">44%</div>
-            Færre Defekter<br/>
-            i Produktion
-        </div>
-          </div>
-          <div class="col-md-4">
-            <div class="result">
-              <div class="text-xlarge">50%</div>
-            Lavere<br/>
-            Omkostninger
-        </div>
-          </div>
-        </div>
-
-        <ul>
-          <li>Hvad er Continuous Delivery?</li>
-          <li>Fordelene ved Continuous Delivery.</li>
-          <li>Hvordan vi kom i gang med skiftet? Hvad skulle der til, før vi tog springet?</li>
-          <li>Detaljer om, hvordan vi rent faktisk begyndte at lave Continuous Delivery.</li>
-          <li>Vores nye udviklingsproces tilpasset Continuous Delivery (bl.a. tools).</li>
-          <li>Sådan bruger vi
-            <b>versionskontrol</b>.</li>
-          <li>Sådan bruger vi
-            <b>Continuous Integration</b>.</li>
-          <li>Sådan bruger vi
-            <b>Continuous Procurement</b>.</li>
-          <li>
-            Hvad skal der til for at styre 10 udviklere, der alle push'er til produktion, så snart de er klar?
-          </li>
-          <li>
-            Den mere menneskelige faktor: Vores udviklingsfilosofi. En filosofi, der inkluderer ting som "people over process", den kompetente udvikler og DevOps.
-          </li>
-          <li>Vores ambitiøse tilgang til kvalitet og hastighed.</li>
-          <li>
-            Sådan har overgangen til Continuous Delivery påvirket kvaliteten, og hastigheden af vores daglige arbejde.
-          </li>
-        </ul>
-        <p>
-          Udgangspunktet for hele foredraget er praktiske erfaringer, hvad vi har lært, hvad der virker for os, og fejl vi har begået. Når du har hørt dette foredrag, vil du have fået en del fif til, hvordan du selv kan komme i gang med Continuous Delivery i din organisation.
-        </p>
-
-        <p>
-          Det her foredrag
-          <b>rykker noget</b>
-          i dem, der hører det. Vær forberedt på en livlig diskussion og noget at gruble over bagefter.
-        </p>
-        <a class="btn btn-default btn-sm" href="mailto:allan@itforedrag.dk?subject=Spørgsmål ang. foredraget: Continuous Delivery Warstories">spørg om mere info...
-        </a>
-      </div>
-      <div class="small-xs text-center" style="margin: 26px 0 16px 0;">
-        <div id="playButtonContainer2" style="position: absolute; left: 50%;">
-          <div style="position: relative; left: -50%; z-index: 10;">
-            <div id="playButton2"></div>
-          </div>
-        </div>
-        <div id="videoImageContainer2" style="position: absolute; left: 50%;">
-          <div style="position: relative; left: -50%; z-index: 0;">
-            <picture>
-              <source srcset="/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg.webp" type="image/webp">
-              <img id="videoImage2" src="/img/Continuous-Delivery-Warstories-14th-Jan-2015.jpg" class="img-rounded" style="width: 640px; height: 359px;"/>
-            </picture>
-          </div>
-        </div>
-        <div id="ytapiplayer2-2" style="height: 365px; margin: -3px;"></div>
-        <em >Continuous Delivery Warstories - foredrag til
-          <a href="https://www.meetup.com/AgilityLab/">AgilityLab</a>
-          meetup
-          <br/>
-          Dette var første gang dette foredrag blev holdt - se udviklingen i forhold til videoen fra GOTO</em >
-      </div>
       <hr/>
       <h2>Om Allan Ebdrup</h2>
       <div class="row">
         <div class="col-md-6">
           <p>
-            Jeg har et
+            Har du brug for et 
             <a href="/img/AllanEbdrup.jpg" download="AllanEbdrup.jpg">hi-res-portrætfoto</a>
-            af mig selv til dine tryksager fx kursus-katalog.
+            af mig selv til dine tryksager fx kursus-katalog?
           </p>
 
           <p>
-            Hvis du vil vide lidt mere om mig, kan du se detaljer om min professionelle karriere på
+            Hvis du vil vide mere om mig, kan du se detaljer om min professionelle karriere på
             <a href="https://www.linkedin.com/in/ebdrup">LinkedIn</a>.
           </p>
         </div>
@@ -664,14 +628,12 @@
           <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
         </p>
         <p>
-          &copy; Allan Ebdrup.    
+          &copy; Allan Ebdrup. Foto fra GOTO af:
+          <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse
+          </a >
         </p>
       </footer>
 
     </div>
-
-    {{ '_includes/jquery.min.js' | load | script | safe }}
-    {{ '_js/playVideo.js' | load | jsmin | script | safe }}
-
   </body>
 </html>
