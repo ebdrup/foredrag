@@ -41,9 +41,9 @@
   "homepage": "http://itforedrag.dk",
   "dependencies": {
     "@11ty/eleventy": "0.10.0",
-    "clean-css": "4.2.3",
     "html-minifier": "4.0.0",
-    "nunjucks": "3.2.1"
+    "nunjucks": "3.2.1",
+    "purify-css": "1.2.5"
   },
   "devDependencies": {
     "@practio/eslint-config-practio": "7.1.0",
