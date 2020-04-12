@@ -22,11 +22,8 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
-    {% set bootstrap %}
-    {% include "bootstrap.css" %}
-    {% endset %}
     <style>
-      {{bootstrap | cssmin | safe}}
+      {{ "bootstrap.css" | purifyCss | safe }}
     </style>
     <style>
       body,

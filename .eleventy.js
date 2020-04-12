@@ -1,5 +1,7 @@
-let Nunjucks = require('nunjucks');
-const CleanCSS = require('clean-css');
+const path = require('path');
+const fs = require('fs');
+const Nunjucks = require('nunjucks');
+const purifyCss = require('purify-css');
 const htmlmin = require('html-minifier');
 
 module.exports = function (eleventyConfig) {
@@ -11,8 +13,10 @@ module.exports = function (eleventyConfig) {
   let nunjucksEnvironment = new Nunjucks.Environment(new Nunjucks.FileSystemLoader('_includes'));
   eleventyConfig.setLibrary('njk', nunjucksEnvironment);
 
-  eleventyConfig.addFilter('cssmin', function (code) {
-    return new CleanCSS({}).minify(code).styles;
+  eleventyConfig.addNunjucksAsyncFilter('purifyCss', function (file, cb) {
+    const css = fs.readFileSync(path.join(__dirname, '_includes', file), 'utf-8');
+    const html = fs.readFileSync(path.join(__dirname, this.ctx.page.inputPath), 'utf-8');
+    purifyCss(html, css, { output: false, info: true, minify: true }, res => cb(null, res));
   });
 
   // Minify HTML output
