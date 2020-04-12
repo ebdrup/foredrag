@@ -20,16 +20,20 @@ h2 {
 body {
   font-weight: 200;
 }
+.result .text-xlarge {
+  margin-bottom: -10px;
+}
+
 .result {
   margin: 20px;
-  padding: 5px 20px 5px 20px;
+  padding: 5px 20px 15px 20px;
   color: #eee;
   background-color: #4ba13f;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
   display: inline-block;
   font-weight: 900;
   border-radius: 5px;
-  min-width: 270px;
+  min-width: 230px;
 }
 .result-percent {
   position: absolute;
