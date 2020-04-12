@@ -40,11 +40,12 @@
   },
   "homepage": "http://itforedrag.dk",
   "dependencies": {
-    "@11ty/eleventy": "0.10.0",
     "clean-css": "4.2.3",
+    "html-minifier": "4.0.0",
     "nunjucks": "3.2.1"
   },
   "devDependencies": {
+    "@11ty/eleventy": "0.10.0",
     "@practio/eslint-config-practio": "7.1.0",
     "@practio/prettier-config": "4.0.0",
     "husky": "4.2.5",
