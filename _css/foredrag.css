@@ -13,8 +13,22 @@ h2 {
   font-weight: bolder;
 }
 
+.text-xlarge {
+  font-size: 250%;
+}
+
 body {
   font-weight: 200;
+}
+.result {
+  margin: 20px;
+  padding: 5px 20px 5px 20px;
+  color: #eee;
+  background-color: #4ba13f;
+  box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  font-weight: 900;
+  border-radius: 5px;
 }
 
 #playButton,
