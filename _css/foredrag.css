@@ -66,6 +66,7 @@ body {
   opacity: 0.5;
   margin: 1vh 6vh 1vh 0;
   display: inline-block;
+  font-weight: 900;
 }
 
 .email {
