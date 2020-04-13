@@ -23,6 +23,11 @@ h3 {
   color: #343;
 }
 
+q {
+  display: block;
+  padding: 10px;
+}
+
 .contents-of-warstories {
   margin: 20px 0 20px 0;
 }
@@ -129,7 +134,31 @@ li {
   margin-top: -20px;
 }
 
-.gotoEval {
+.bar {
+  display: inline-block;
+  height: 13px;
+  background-color: #f1c40f;
+  margin-right: 10px;
+}
+
+.six-star {
+  width: 96px;
+}
+
+.five-star {
+  width: 15px;
+}
+
+.four-star {
+  width: 3px;
+}
+
+.prosa-eval > img {
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.goto-eval {
   max-width: 600px;
   margin-top: 20px;
 }

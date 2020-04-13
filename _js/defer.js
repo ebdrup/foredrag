@@ -6,6 +6,11 @@ if (window.addEventListener) {
   window.attachEvent('onload', defer);
 }
 function defer() {
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    load(document.getElementsByTagName('iframe'));
+    load(document.getElementsByTagName('script'));
+    return;
+  }
   setTimeout(function () {
     load(document.getElementsByTagName('iframe'));
     load(document.getElementsByTagName('script'));
