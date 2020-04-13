@@ -66,6 +66,11 @@ li {
   background-position: 0;
 }
 
+#jumbotron3 {
+  background-image: url('/img/goto2-wide.jpg');
+  background-position: 0 30%;
+}
+
 .header-in-jumbo {
   position: relative;
   top: -120px;
