@@ -5,6 +5,7 @@ html {
 
 body {
   font-weight: 400;
+  font-size: 18px;
 }
 
 h1 {
@@ -16,6 +17,10 @@ h1 {
 h2 {
   color: #4ba13f;
   font-weight: bolder;
+}
+
+h3 {
+  color: #343;
 }
 
 li {
@@ -44,12 +49,23 @@ li {
   display: inline-block;
   font-weight: 900;
   border-radius: 5px;
-  min-width: 230px;
+  min-width: 210px;
 }
+
+.result-threeLetterPercentage {
+  margin-right: 13px;
+}
+
 .result-percent {
   position: absolute;
   font-size: 24px;
   margin: 16px 0 0 3px;
+}
+
+@media (max-width: 991px) {
+  .result {
+    zoom: 0.6;
+  }
 }
 
 .jumbotron {
@@ -82,14 +98,31 @@ li {
   background-color: #fff;
 }
 
+.header-in-jumbo + * {
+  margin-top: -80px;
+}
+
+.youtube {
+  margin: 26px 0 16px 0;
+}
+
+.youtube > em {
+  margin-top: -20px;
+}
+
+.gotoEval {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.portrait {
+  width: 100px;
+  height: 150px;
+}
+
 @media (max-width: 767px) {
   .small-xs {
     zoom: 0.5;
-  }
-}
-@media (max-width: 991px) {
-  .result {
-    zoom: 0.6;
   }
 }
 
