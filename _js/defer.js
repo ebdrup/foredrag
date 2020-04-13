@@ -1,4 +1,11 @@
-window.onload = function () {
+if (window.addEventListener) {
+  // W3C standard
+  window.addEventListener('load', defer, false);
+} else if (window.attachEvent) {
+  // Microsoft
+  window.attachEvent('onload', defer);
+}
+function defer() {
   setTimeout(function () {
     load(document.getElementsByTagName('iframe'));
     load(document.getElementsByTagName('script'));
@@ -12,4 +19,4 @@ window.onload = function () {
       }
     }
   }
-};
+}
