@@ -56,18 +56,19 @@ li {
   background-size: cover;
   height: 300px;
 }
+
 #jumbotron1 {
-  background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015-wide-blur.jpg');
+  background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015-wide-blur.jpg.webp');
   background-position: 50%;
 }
 
 #jumbotron2 {
-  background-image: url('/img/goto-wide-blur.jpg');
+  background-image: url('/img/goto-wide-blur.jpg.webp');
   background-position: 0;
 }
 
 #jumbotron3 {
-  background-image: url('/img/goto2-wide.jpg');
+  background-image: url('/img/goto2-wide.jpg.webp');
   background-position: 0 30%;
 }
 

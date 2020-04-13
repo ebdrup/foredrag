@@ -28,7 +28,7 @@
 
   <body style="font-size: 18px;">
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" id="jumbotron1"></div>
+    <div class="jumbotron webp" id="jumbotron1"></div>
 
     <div class="container">
       <h2 class="header-in-jumbo">
@@ -62,7 +62,7 @@
       </p>
 
     </div>
-    <div class="jumbotron" id="jumbotron2"></div>
+    <div class="jumbotron webp" id="jumbotron2"></div>
 
     <div class="container">
       <h2 class="header-in-jumbo">
@@ -329,7 +329,7 @@
       </p>
       <hr/>
     </div>
-    <div class="jumbotron" id="jumbotron3"></div>
+    <div class="jumbotron webp" id="jumbotron3"></div>
 
     <div class="container">
       <h2 class="header-in-jumbo">
@@ -658,5 +658,6 @@
       </footer>
 
     </div>
+    {{ "_js/webp.js" | load | jsmin | script | safe }}
   </body>
 </html>
