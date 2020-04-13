@@ -6,6 +6,13 @@ if (window.addEventListener) {
   window.attachEvent('onload', defer);
 }
 function defer() {
+  if (
+    (location.hostname === 'localhost' || location.hostname === '127.0.0.1') &&
+    URLSearchParams &&
+    new URLSearchParams(window.location.search).get('defer') === 'false'
+  ) {
+    return;
+  }
   setTimeout(function () {
     load(document.getElementsByTagName('iframe'));
     load(document.getElementsByTagName('script'));
@@ -15,7 +22,7 @@ function defer() {
     for (var i = 0; i < items.length; i++) {
       if (items[i].getAttribute('data-src')) {
         items[i].setAttribute('src', items[i].getAttribute('data-src'));
-        items[i].className = items[i].className.replace('hide', '');
+        items[i].className = items[i].className.replace('blank', '');
       }
     }
   }

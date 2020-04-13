@@ -23,6 +23,15 @@ h3 {
   color: #343;
 }
 
+q {
+  display: block;
+  padding: 10px;
+}
+
+.blank {
+  visibility: hidden;
+}
+
 .contents-of-warstories {
   margin: 20px 0 20px 0;
 }
@@ -125,11 +134,45 @@ li {
   margin: 26px 0 16px 0;
 }
 
+.youtube-spinner {
+  position: relative;
+  top: 140px;
+  z-index: -1;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  margin-bottom: -100px;
+}
+
 .youtube > em {
   margin-top: -20px;
 }
 
-.gotoEval {
+.prosa-bar {
+  display: inline-block;
+  height: 13px;
+  background-color: #f1c40f;
+  margin-right: 10px;
+}
+
+.six-star {
+  width: 96px;
+}
+
+.five-star {
+  width: 15px;
+}
+
+.four-star {
+  width: 3px;
+}
+
+.prosa-eval > img {
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.goto-eval {
   max-width: 600px;
   margin-top: 20px;
 }
@@ -153,7 +196,7 @@ li {
 .github {
   background-repeat: no-repeat;
   background-size: contain;
-  padding-left: 3.8vh;
+  padding-left: 1.7em;
   opacity: 0.5;
   margin: 1vh 6vh 1vh 0;
   display: inline-block;
