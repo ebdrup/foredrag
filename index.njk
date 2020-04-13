@@ -186,7 +186,7 @@
             <a href="https://twitter.com/codecph/status/651724049463312384">October 7, 2015
             </a>
           </blockquote>
-          <script async="async" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script async="async" data-src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <div class="col-md-6">
           <blockquote class="twitter-tweet" data-lang="en">
@@ -202,7 +202,7 @@
             <a href="https://twitter.com/codecph/status/651720912128081920">October 7, 2015
             </a>
           </blockquote>
-          <script async="async" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script async="async" data-src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
 
@@ -663,6 +663,6 @@
 
     </div>
     {{ "_js/webp.js" | load | jsmin | script | safe }}
-    {{ "_js/deferYoutube.js" | load | jsmin | script | safe }}
+    {{ "_js/defer.js" | load | jsmin | script | safe }}
   </body>
 </html>
