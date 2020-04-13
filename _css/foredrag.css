@@ -66,6 +66,11 @@ li {
   font-size: 24px;
   margin: 16px 0 0 3px;
 }
+.result-top {
+  font-size: 33%;
+  margin-left: -2em;
+  vertical-align: middle;
+}
 
 @media (max-width: 991px) {
   .result {
