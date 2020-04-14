@@ -172,9 +172,42 @@ li {
   padding-bottom: 5px;
 }
 
+.goto-bar {
+  margin-left: 10px;
+  display: inline-block;
+  height: 23px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
 .goto-eval {
-  max-width: 600px;
-  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.green {
+  color: #4ba13f;
+}
+
+.yellow {
+  color: #dbd941;
+}
+
+.red {
+  color: #db512f;
+}
+
+.goto-green-bar {
+  background-color: #4ba13f;
+  width: 226px;
+}
+.goto-yellow-bar {
+  background-color: #dbd941;
+  width: 64px;
+}
+.goto-red-bar {
+  background-color: #db512f;
+  width: 4px;
 }
 
 .portrait {
