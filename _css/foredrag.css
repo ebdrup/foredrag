@@ -33,21 +33,10 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-.content-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.5em;
-  padding-inline-start: 0px;
-  margin: 20px 0 20px 0;
-}
-
 .content-list > li {
   list-style: none;
   flex: 1 0 20em;
-}
-
-.content-list > li {
-  list-style: none;
+  max-width: 20em;
   background-image: url('/img/li-arrow.svg');
   background-repeat: no-repeat;
   background-position: left top;
@@ -58,6 +47,21 @@ q {
 
 .text-xlarge {
   font-size: 250%;
+}
+
+/* https://github.com/Heydon/fukol-grids */
+.fukol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5em;
+  padding-inline-start: 0px;
+  margin: 0;
+}
+
+.results > li {
+  list-style: none;
+  flex: 1 0 14em;
+  margin: 0.5em;
 }
 
 .result .text-xlarge {
@@ -89,12 +93,6 @@ q {
   font-size: 33%;
   margin-left: -2em;
   vertical-align: middle;
-}
-
-@media (max-width: 991px) {
-  .result {
-    zoom: 0.6;
-  }
 }
 
 .jumbotron {
@@ -223,14 +221,6 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-.contact {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.5em;
-  padding-inline-start: 0px;
-  margin: 0;
-}
-
 .contact > li {
   list-style: none;
   flex: 1 0 11em;
