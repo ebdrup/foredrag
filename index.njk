@@ -139,7 +139,7 @@
       <h3>Indhold i foredraget</h3>
       <div class="row contents-of-warstories">
         <div class="col-md-6">
-          <ul>
+          <ul class="content-list">
             <li>
               Hvad er Continuous Delivery og DevOps?
             </li>
@@ -208,14 +208,25 @@
       </p>
 
       <h3>Kontakt</h3>
-      <p class="text-center">
-        <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-        <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
-        <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-        <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-        <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
-        <a class="github" href="https://github.com/ebdrup">ebdrup</a>
-      </p>
+      <ul class="contact small">
+        <li>
+          <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
+        </li>
+        <li>
+          <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
+        </li>
+        <li>
+          <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
+        </li>
+        <li>
+          <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
+        </li>
+        <li>
+          <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/ebdrup">ebdrup</a>
+      </ul>
 
       <h3>Video</h3>
       <p>
@@ -687,23 +698,33 @@
       </div>
 
       <footer>
-        <p class="text-center small">
-          <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-          <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
-          <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-          <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-          <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
-          <a class="github" href="https://github.com/ebdrup">ebdrup</a>
-        </p>
-        <p>
-          &copy; Allan Ebdrup. Foto fra GOTO af:
-          <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse
-          </a >
-        </p>
-      </footer>
+        <ul class="contact text-center small">
+          <li>
+            <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
+          </li>
+          <li>
+            <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
+          </li>
+          <li>
+            <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
+          </li>
+          <li>
+            <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
+          </li>
+          <li>
+            <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
+          </li>
+          <li>
+            <a class="github" href="https://github.com/ebdrup">ebdrup</a>
+        </ul>
+        &copy; Allan Ebdrup. Foto fra GOTO af:
+        <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse
+        </a >
+      </p>
+    </footer>
 
-    </div>
-    {{ "_js/webp.js" | load | jsmin | script | safe }}
-    {{ "_js/defer.js" | load | jsmin | script | safe }}
-  </body>
+  </div>
+  {{ "_js/webp.js" | load | jsmin | script | safe }}
+  {{ "_js/defer.js" | load | jsmin | script | safe }}
+</body>
 </html>
