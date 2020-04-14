@@ -28,21 +28,36 @@ q {
   padding: 10px;
 }
 
+/* https://github.com/Heydon/fukol-grids */
+.fukol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5em;
+  padding-inline-start: 0px;
+}
+
+.fukol > li {
+  list-style: none;
+  margin: 0.5em;
+}
 .blank {
   visibility: hidden;
 }
 
+.content-list {
+  margin: 1.5em -1em 1.5em -0.5em; /* -0.5em is from fukol */
+}
+
 /* https://github.com/Heydon/fukol-grids */
 .content-list > li {
-  list-style: none;
   flex: 1 0 20em;
-  max-width: 20em;
   background-image: url('/img/li-arrow.svg');
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: 38px;
-  padding: 12px 20px 12px 48px;
+  background-size: 1.5em;
+  padding-left: 2em;
   line-height: 1.5em;
+  margin-right: 0.5em 1em 0.5em 0.5em;
 }
 
 .text-xlarge {
@@ -50,18 +65,8 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-.fukol {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.5em;
-  padding-inline-start: 0px;
-  margin: 0;
-}
-
 .results > li {
-  list-style: none;
   flex: 1 0 14em;
-  margin: 0.5em;
 }
 
 .result .text-xlarge {
@@ -222,9 +227,7 @@ q {
 
 /* https://github.com/Heydon/fukol-grids */
 .contact > li {
-  list-style: none;
   flex: 1 0 11em;
-  margin: 0.5em;
 }
 
 .email,
