@@ -24,7 +24,7 @@
     <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
     {{["_includes/tweets/tweets.css", "_includes/tweets/tweet1.html", "_includes/tweets/tweet2.html"] | purifyCssBasedOnIncludes | safe}}
-    {{ "_includes/external/bootstrap.css" | purifyCss | safe }}
+    {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
     {{ "_includes/css/foredrag.css" | purifyCss | safe }}
   </head>
 
@@ -65,10 +65,13 @@
       <p>
         Her er en kort 5 min video af en ignite talk jeg gav til CoDe konferencen. Konceptet bag en ignite talk er, at præsentationen automatisk hopper til næste slide hvert 30. sekund, og så skal man får det til at passe.
       </p>
-      <div class="small-xs text-center youtube">
-        <img src="/img/spinner-200px.svg" alt="" class="spinner youtube-spinner"><br/>
-        <iframe title="Don't forget about Process Feedback Loops - CoDe konference" width="640" height="359" class="blank" data-src="https://www.youtube.com/embed/6ETz4ZrqJq8" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-        <br/>
+      <div class="text-center">
+        <img src="/img/spinner-200px.svg" alt="" class="spinner youtube-spinner">
+      </div>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe title="Don't forget about Process Feedback Loops - CoDe konference" class="embed-responsive-item blank" data-src="https://www.youtube.com/embed/6ETz4ZrqJq8" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+      </div>
+      <div class="text-center youtube-caption">
         <em>Don't forget about Process Feedback Loops - CoDe konference</em>
       </div>
     </div>
@@ -203,34 +206,40 @@
       </p>
 
       <h3>Kontakt</h3>
-      <ul class="fukol contact small">
-        <li>
-          <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-        </li>
-        <li>
-          <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
-        </li>
-        <li>
-          <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-        </li>
-        <li>
-          <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-        </li>
-        <li>
-          <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
-        </li>
-        <li>
-          <a class="github" href="https://github.com/ebdrup">ebdrup</a>
-      </ul>
+      <p>
+        <ul class="fukol contact">
+          <li>
+            <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
+          </li>
+          <li>
+            <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
+          </li>
+          <li>
+            <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
+          </li>
+          <li>
+            <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
+          </li>
+          <li>
+            <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
+          </li>
+          <li>
+            <a class="github" href="https://github.com/ebdrup">ebdrup</a>
+        </ul>
+      </p>
 
       <h3>Video</h3>
       <p>
         Jeg udvikler løbende på Continuous Delivery Warstories. Her kan du se en video (47 min) af foredraget fra 2015 på GOTO konferencen.
       </p>
-      <div class="small-xs text-center youtube">
-        <img src="/img/spinner-200px.svg" alt="" class="spinner youtube-spinner"><br/>
-        <iframe title="Continuous Delivery Warstories - GOTO konference" width="640" height="359" class="blank" data-src="https://www.youtube.com/embed/pZ--Tkbop40" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-        <br/>
+
+      <div class="text-center">
+        <img src="/img/spinner-200px.svg" alt="" class="spinner youtube-spinner">
+      </div>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe title="Continuous Delivery Warstories - GOTO konference" class="embed-responsive-item blank" data-src="https://www.youtube.com/embed/pZ--Tkbop40" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+      </div>
+      <div class="text-center youtube-caption">
         <em>Continuous Delivery Warstories - GOTO konference</em>
       </div>
 
@@ -238,463 +247,463 @@
       <p>
         Jeg har flere gange holde foredrag på CoDe konferencen. CoDe, er en forkortelse af Continuous Delivery. Konferencen handler om det nyeste indenfor udviklingsprocesser of tools. Jeg kan på det varmeste anbefale konferencen.
       </p>
-      <div class="text-center">
-        <ul class="fukol tweets">
-          <li>
-            <div>{% include 'tweets/tweet1.html' %}</div>
-          </li>
-          <li>
-            <div>{% include 'tweets/tweet2.html' %}</div>
-          </li>
-        </div>
-
-        <h2>Evalueringerer af foredrag</h2>
-
-        Her er lidt eksempler på evalueringer af mine foredrag.
-
-        <div class="fukol prosa">
-          <div>
-            <h3>Evaluering hos PROSA</h3>
-            <p class="prosa-eval">
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <span class="prosa-bar six-star"></span>
-              32
-              <br/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-off.svg" alt=""/>
-              <span class="prosa-bar five-star"></span>
-              5
-              <br/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              <span class="prosa-bar four-star"></span>
-              1
-              <br/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              0
-              <br/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              0
-              <br/>
-              <img src="/img/star-on.svg" alt="*"/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              <img src="/img/star-off.svg" alt=""/>
-              0
-            </p>
-          </div>
-          <div>
-            <h4>Kommentarer</h4>
-
-            <q>SUPERBT. DEN MAND VED HVAD HAN TALER OM!</q>
-
-            <q>Super godt. I afholder gode, relevante foredrag. Fortsæt!</q>
-
-            <q>Det er imponerende godt, og yderst relevant</q>
-
-            <q>God og underholdende fremlæggelse</q>
-
-            <q>Perfekt</q>
-
-            <q>Fantastisk</q>
-          </div>
-        </div>
-        <h3>Evaluering på GOTO Konferencen</h3>
-        <p class="text-center">
-          <table>
-            <tbody>
-              <tr>
-                <td class="green goto-eval">GRØN</td>
-                <td>
-                  <span class="goto-bar goto-green-bar"></span>
-                  113</td>
-              </tr>
-              <tr>
-                <td class="yellow goto-eval">GUL</td>
-                <td>
-                  <span class="goto-bar goto-yellow-bar"></span>
-                  32</td>
-              </tr>
-              <tr>
-                <td class="red goto-eval">RØD</td>
-                <td>
-                  <span class="goto-bar goto-red-bar"></span>
-                  2</td>
-              </tr>
-            </tbody>
-          </table>
-        </p>
-        <hr/>
+      <div class="fukol tweets">
+        <li>
+          <div>{% include 'tweets/tweet1.html' %}</div>
+        </li>
+        <li>
+          <div>{% include 'tweets/tweet2.html' %}</div>
+        </li>
       </div>
-      <div class="jumbotron webp" id="jumbotron3"></div>
 
-      <div class="container">
-        <h2 class="header-in-jumbo">
-          CTO med solid udviklererfaring
-        </h2>
-
-        <h3>Om Allan Ebdrup</h3>
-        <ul class="fukol about">
-          <li>
-            <p>
-              Mine erfaringer er indenfor
-              <strong>udvikling af skræddersyede web-produkter</strong>
-              med lang holdbarhed. Egenudviklede cloud-løsninger.
-            </p>
-            <p>
-              Jeg har en solid programør-erfaring, inden jeg bevægede mig over i rollen som CTO. Jeg elsker stadig at kode - selvom det kun er periodisk jeg finder tid til det.
-            </p>
-            <p>
-              Et karriere highlight er, at have taget
-              <a href="https://debitoor.dk/">Debitoor</a>
-              fra vi skrev den første linje kode til backenden, til ti-tusindvis af betalende brugere og en exit til SumUp.
-            </p>
-            <p>
-              Lige nu er jeg i gang med det seneste store projekt, hvor vi bygger en medicinsk platform hos
-              <a href="https://practio.co.uk/travel-health/">Practio</a>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Hvis du vil vide mere om mig, kan du se detaljer om min professionelle karriere på
-              <a href="https://www.linkedin.com/in/ebdrup">LinkedIn</a>.
-            </p>
-            <p>
-              Klik på billeded nedenfor for at downloade er hi-res-portrætfoto af mig til dine tryksager, kursus-katalog osv.
-            </p>
-            <p class="text-center">
-              <a href="/img/AllanEbdrup.jpg" download="AllanEbdrup.jpg" title="Download hi-res protrætbillede">
-                <picture>
-                  <source srcset="/img/AllanEbdrup-lowres.jpg.webp" type="image/webp">
-                  <img class="img-rounded portrait" src="/img/AllanEbdrup-lowres.jpg" alt="Download hi-res protrætbillede">
-                </picture>
-              </a>
-            </p>
-          </li>
-        </ul>
-
-        <hr/>
-        <h3>Foredragskalender</h3>
-
-        <div class="table-responsive">
-          <table class="small-xs table table-striped">
-            <thead>
-              <tr>
-                <th>Dato</th>
-                <th>Sted</th>
-                <th>Titel</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>3-4. April 2019</td>
-                <td>DevOps days Copenhagen</td>
-                <td>
-                  <a href="https://www.devopsdays.org/events/2019-copenhagen/welcome/">War stories about the Ops in DevOps</a >
-                </td>
-              </tr>
-              <tr>
-                <td>29. November 2018</td>
-                <td>SummIT - Den progressive it-organisation</td>
-                <td>
-                  <a href="https://www.dit.dk/Konferencer/SummIT-2018">DevOps – Historier fra fronten</a >
-                </td>
-              </tr>
-              <tr>
-                <td>7. Maj 2018</td>
-                <td>eDreams spanien</td>
-                <td>
-                  Continuous Delivery Warstories (lukket arrangement)
-                </td>
-              </tr>
-              <tr>
-                <td>4. Maj 2018</td>
-                <td>IT-Universitetet</td>
-                <td>Continuous Delivery Warstories (Gæsteforelæsning)</td>
-              </tr>
-              <tr>
-                <td>24. April 2018</td>
-                <td>DevOps days Copenhagen</td>
-                <td>
-                  <a href="https://www.devopsdays.org/events/2018-copenhagen/speakers/">Don't forget about your process feedback loops</a >
-                </td>
-              </tr>
-              <tr>
-                <td>30. Maj 2017</td>
-                <td>Computerworld</td>
-                <td>
-                  <a href="https://computerworldevents.dk/553/devops_konference">For the love of DevOps (keynote)</a >
-                </td>
-              </tr>
-              <tr>
-                <td>7. April 2017</td>
-                <td>IT-Universitetet</td>
-                <td>Continuous Delivery Warstories (Gæsteforelæsning)</td>
-              </tr>
-              <tr>
-                <td>19. Januar 2016</td>
-                <td>CopenhagenJS</td>
-                <td>
-                  <a href="https://www.meetup.com/copenhagenjs/events/236816775/">How we replaced our Drupal CMS with 589 lines of JavaScript</a >
-                </td>
-              </tr>
-              <tr>
-                <td>30. September 2016</td>
-                <td>Datamatikerlærer-foreningen</td>
-                <td>Continuous Delivery Warstories (lukket arrangement)</td>
-              </tr>
-              <tr>
-                <td>16. Juni 2016</td>
-                <td>DSB</td>
-                <td>Continuous Delivery Warstories (lukket arrangement)</td>
-              </tr>
-              <tr>
-                <td>9. Juni 2016</td>
-                <td>Københavns Universitet</td>
-                <td>Continuous Delivery Warstories (lukket arrangement)</td>
-              </tr>
-              <tr>
-                <td>23. Oktober 2015</td>
-                <td>Gyldendal</td>
-                <td>Continuous Delivery Warstories (lukket arrangement)</td>
-              </tr>
-              <tr>
-                <td>7. Oktober 2015</td>
-                <td>CoDe-conf København</td>
-                <td>
-                  <a href="https://www.code-conf.com/">Continuous Delivery Warstories (C-level condensed english version)</a >
-                </td>
-              </tr>
-              <tr>
-                <td>5. Oktober 2015</td>
-                <td>GOTO København</td>
-                <td>
-                  <a href="https://gotocon.com/cph-2015/presentation/Continuous%20Delivery%20warstories">Continuous Delivery Warstories (condensed english version)</a >
-                </td>
-              </tr>
-              <tr>
-                <td>16. September 2015</td>
-                <td>København</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=572&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=2aa635fcf22827f52bb7be08748337a6">Continuous Delivery Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>26. Aug 2015</td>
-                <td>Odense</td>
-                <td>
-                  Continuous Delivery Warstories (lukket arrangement)
-                </td>
-              </tr>
-              <tr>
-                <td>21. Maj 2015</td>
-                <td>Ålborg</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=438&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=418f99d476c9e51607e3b4672f138c71">Continuous Delivery Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>30. April 2015</td>
-                <td>Aarhus</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=376&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=0bd15eb7ec377d9bbc41d9f2023c087c">Node.js Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>26. Marts 2015</td>
-                <td>Aarhus</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=374&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=f1676f0d3954abacea239b0435149c1f">Continuous Delivery Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>17. Marts 2015</td>
-                <td>Vejle</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=373&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=eedd8d50ff5791906ad3566fa6fc0c54">Continuous Delivery Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>9. Marts 2015</td>
-                <td>Odense</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=372&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=37b55891460e896f81c30dc3b7f52f5a">Continuous Delivery Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>4. Marts 2015</td>
-                <td>København</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=413&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=5319d8646827a650be7c60382158a1e9">MongoDB Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>15. Jan 2015</td>
-                <td>København</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=408&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=4f924f8959aa22c273fd7c34f12c1b1c">Node.js Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>14. Jan 2015</td>
-                <td>København</td>
-                <td>
-                  <a href="https://www.meetup.com/AgilityLab/events/216548902/">Continuous Delivery Warstories (condensed english version)</a >
-                </td>
-              </tr>
-              <tr>
-                <td>20. November 2014</td>
-                <td>Datalog-foreningen (Aarhus)</td>
-                <td>MongoDB Warstories</td>
-              </tr>
-              <tr>
-                <td>16. Oktober 2014</td>
-                <td>Aarhus</td>
-                <td>
-                  <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=194&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=ce79dc471eda2dbf376974e7aee18c76">MongoDB Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>2. Oktober 2014</td>
-                <td>Datalog-foreningen (Aarhus)</td>
-                <td>
-                  <a href="https://www.datalogforeningen.dk/index.php/news/39/15/Faglig-Aften-d-2-oktober-2014-Node-js-warstories">Node.js Warstories</a >
-                </td>
-              </tr>
-              <tr>
-                <td>12. Juni 2014</td>
-                <td>Official MongoDB usergroup (Stockholm)</td>
-                <td>
-                  <a href="https://www.meetup.com/Stockholm-MongoDB-User-Group/events/184327682/">MongoDB Warstories (condensed english version)</a >
-                </td>
-              </tr>
-              <tr>
-                <td>20. Maj 2014</td>
-                <td>GOTO Nights (Kbh)</td>
-                <td>
-                  <a href="https://secure.trifork.com/cph-2014/freeevent/index.jsp?eventOID=6205">Node.js Warstories
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>20. Marts 2014</td>
-                <td>Odense</td>
-                <td>MongoDB Warstories</td>
-              </tr>
-              <tr>
-                <td>13. Marts 2014</td>
-                <td>Odense</td>
-                <td>Node.js Warstories</td>
-              </tr>
-              <tr>
-                <td>4. Marts 2014</td>
-                <td>Vejle</td>
-                <td>MongoDB Warstories</td>
-              </tr>
-              <tr>
-                <td>27. Februar 2014</td>
-                <td>Vejle</td>
-                <td>Node.js Warstories</td>
-              </tr>
-              <tr>
-                <td>4. Februar 2014</td>
-                <td>Ålborg</td>
-                <td>MongoDB Warstories</td>
-              </tr>
-              <tr>
-                <td>23. Oktober 2013</td>
-                <td>Tech Talent Night - DTU (Kbh)</td>
-                <td>
-                  <a href="https://www.facebook.com/events/623608751022985/">MongoDB Warstories</a>
-                </td>
-              </tr>
-              <tr>
-                <td>12. September 2013</td>
-                <td>Aarhus</td>
-                <td>Node.js Warstories</td>
-              </tr>
-              <tr>
-                <td>3. September 2013</td>
-                <td>Ålborg</td>
-                <td>
-                  <a href="https://www.geekhub.dk/meetings/358">Node.js og kunsten at vedligeholde 1,2 mio. linjer JavaScript
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>12. Marts 2013</td>
-                <td>GOTO Nights (Kbh)</td>
-                <td>
-                  <a href="https://secure.trifork.com/aarhus-2013/freeevent/index.jsp?eventOID=5245">Sådan bliver 1 million linjer JavaScript-kode nemme at vedligeholde</a >
-                </td>
-              </tr>
-              <tr>
-                <td>16. Aug 2012</td>
-                <td>CopenhagenJS (Kbh)</td>
-                <td>
-                  <a href="https://lanyrd.com/2012/copenhagenjs-august/">Quality in JavaScript code (browser and node.js)
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <footer>
-          <ul class="fukol contact text-center small">
-            <li>
-              <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-            </li>
-            <li>
-              <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
-            </li>
-            <li>
-              <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-            </li>
-            <li>
-              <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-            </li>
-            <li>
-              <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
-            </li>
-            <li>
-              <a class="github" href="https://github.com/ebdrup">ebdrup</a>
-          </ul>
-          <p class="small copy">&copy; Allan Ebdrup. Foto fra GOTO af:
-            <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse
-            </a >
+      <h2>Evalueringerer af foredrag</h2>
+      <p>
+        Her er lidt eksempler på evalueringer af mine foredrag.
+      </p>
+      <div class="fukol prosa">
+        <div>
+          <h3>Evaluering hos PROSA</h3>
+          <p class="prosa-eval">
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <span class="prosa-bar six-star"></span>
+            32
+            <br/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-off.svg" alt=""/>
+            <span class="prosa-bar five-star"></span>
+            5
+            <br/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            <span class="prosa-bar four-star"></span>
+            1
+            <br/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            0
+            <br/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            0
+            <br/>
+            <img src="/img/star-on.svg" alt="*"/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            <img src="/img/star-off.svg" alt=""/>
+            0
           </p>
-        </p>
-      </footer>
+        </div>
+        <div>
+          <h4>Kommentarer</h4>
 
+          <q>SUPERBT. DEN MAND VED HVAD HAN TALER OM!</q>
+
+          <q>Super godt. I afholder gode, relevante foredrag. Fortsæt!</q>
+
+          <q>Det er imponerende godt, og yderst relevant</q>
+
+          <q>God og underholdende fremlæggelse</q>
+
+          <q>Perfekt</q>
+
+          <q>Fantastisk</q>
+        </div>
+      </div>
+
+      <h3>Evaluering på GOTO Konferencen</h3>
+      <p class="text-center">
+        <table>
+          <tbody>
+            <tr>
+              <td class="green goto-eval">GRØN</td>
+              <td>
+                <span class="goto-bar goto-green-bar"></span>
+                113</td>
+            </tr>
+            <tr>
+              <td class="yellow goto-eval">GUL</td>
+              <td>
+                <span class="goto-bar goto-yellow-bar"></span>
+                32</td>
+            </tr>
+            <tr>
+              <td class="red goto-eval">RØD</td>
+              <td>
+                <span class="goto-bar goto-red-bar"></span>
+                2</td>
+            </tr>
+          </tbody>
+        </table>
+      </p>
+      <hr/>
     </div>
-    {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
-    {{ "_includes/js/defer.js" | load | jsmin | script | safe }}
-  </body>
+    <div class="jumbotron webp" id="jumbotron3"></div>
+
+    <div class="container">
+      <h2 class="header-in-jumbo">
+        CTO med solid udviklererfaring
+      </h2>
+
+      <h3>Om Allan Ebdrup</h3>
+      <ul class="fukol about">
+        <li>
+          <p>
+            Mine erfaringer er indenfor
+            <strong>udvikling af skræddersyede web-produkter</strong>
+            med lang holdbarhed. Egenudviklede cloud-løsninger.
+          </p>
+          <p>
+            Jeg har en solid programør-erfaring, inden jeg bevægede mig over i rollen som CTO. Jeg elsker stadig at kode - selvom det kun er periodisk jeg finder tid til det.
+          </p>
+          <p>
+            Et karriere highlight er, at have taget
+            <a href="https://debitoor.dk/">Debitoor</a>
+            fra vi skrev den første linje kode til backenden, til ti-tusindvis af betalende brugere og en exit til SumUp.
+          </p>
+          <p>
+            Lige nu er jeg i gang med det seneste store projekt, hvor vi bygger en medicinsk platform hos
+            <a href="https://practio.co.uk/travel-health/">Practio</a>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Hvis du vil vide mere om mig, kan du se detaljer om min professionelle karriere på
+            <a href="https://www.linkedin.com/in/ebdrup">LinkedIn</a>.
+          </p>
+          <p>
+            Klik på billeded nedenfor for at downloade er hi-res-portrætfoto af mig til dine tryksager, kursus-katalog osv.
+          </p>
+          <p class="text-center">
+            <a href="/img/AllanEbdrup.jpg" download="AllanEbdrup.jpg" title="Download hi-res protrætbillede">
+              <picture>
+                <source srcset="/img/AllanEbdrup-lowres.jpg.webp" type="image/webp">
+                <img class="img-rounded portrait" src="/img/AllanEbdrup-lowres.jpg" alt="Download hi-res protrætbillede">
+              </picture>
+            </a>
+          </p>
+        </li>
+      </ul>
+
+      <hr/>
+      <h3>Foredragskalender</h3>
+
+      <div class="table-responsive">
+        <table class="small table table-striped">
+          <thead>
+            <tr>
+              <th>Dato</th>
+              <th>Sted</th>
+              <th>Titel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3-4. April 2019</td>
+              <td>DevOps days Copenhagen</td>
+              <td>
+                <a href="https://www.devopsdays.org/events/2019-copenhagen/welcome/">War stories about the Ops in DevOps</a >
+              </td>
+            </tr>
+            <tr>
+              <td>29. November 2018</td>
+              <td>SummIT - Den progressive it-organisation</td>
+              <td>
+                <a href="https://www.dit.dk/Konferencer/SummIT-2018">DevOps – Historier fra fronten</a >
+              </td>
+            </tr>
+            <tr>
+              <td>7. Maj 2018</td>
+              <td>eDreams spanien</td>
+              <td>
+                Continuous Delivery Warstories (lukket arrangement)
+              </td>
+            </tr>
+            <tr>
+              <td>4. Maj 2018</td>
+              <td>IT-Universitetet</td>
+              <td>Continuous Delivery Warstories (Gæsteforelæsning)</td>
+            </tr>
+            <tr>
+              <td>24. April 2018</td>
+              <td>DevOps days Copenhagen</td>
+              <td>
+                <a href="https://www.devopsdays.org/events/2018-copenhagen/speakers/">Don't forget about your process feedback loops</a >
+              </td>
+            </tr>
+            <tr>
+              <td>30. Maj 2017</td>
+              <td>Computerworld</td>
+              <td>
+                <a href="https://computerworldevents.dk/553/devops_konference">For the love of DevOps (keynote)</a >
+              </td>
+            </tr>
+            <tr>
+              <td>7. April 2017</td>
+              <td>IT-Universitetet</td>
+              <td>Continuous Delivery Warstories (Gæsteforelæsning)</td>
+            </tr>
+            <tr>
+              <td>19. Januar 2016</td>
+              <td>CopenhagenJS</td>
+              <td>
+                <a href="https://www.meetup.com/copenhagenjs/events/236816775/">How we replaced our Drupal CMS with 589 lines of JavaScript</a >
+              </td>
+            </tr>
+            <tr>
+              <td>30. September 2016</td>
+              <td>Datamatikerlærer-foreningen</td>
+              <td>Continuous Delivery Warstories (lukket arrangement)</td>
+            </tr>
+            <tr>
+              <td>16. Juni 2016</td>
+              <td>DSB</td>
+              <td>Continuous Delivery Warstories (lukket arrangement)</td>
+            </tr>
+            <tr>
+              <td>9. Juni 2016</td>
+              <td>Københavns Universitet</td>
+              <td>Continuous Delivery Warstories (lukket arrangement)</td>
+            </tr>
+            <tr>
+              <td>23. Oktober 2015</td>
+              <td>Gyldendal</td>
+              <td>Continuous Delivery Warstories (lukket arrangement)</td>
+            </tr>
+            <tr>
+              <td>7. Oktober 2015</td>
+              <td>CoDe-conf København</td>
+              <td>
+                <a href="https://www.code-conf.com/">Continuous Delivery Warstories (C-level condensed english version)</a >
+              </td>
+            </tr>
+            <tr>
+              <td>5. Oktober 2015</td>
+              <td>GOTO København</td>
+              <td>
+                <a href="https://gotocon.com/cph-2015/presentation/Continuous%20Delivery%20warstories">Continuous Delivery Warstories (condensed english version)</a >
+              </td>
+            </tr>
+            <tr>
+              <td>16. September 2015</td>
+              <td>København</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=572&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=2aa635fcf22827f52bb7be08748337a6">Continuous Delivery Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>26. Aug 2015</td>
+              <td>Odense</td>
+              <td>
+                Continuous Delivery Warstories (lukket arrangement)
+              </td>
+            </tr>
+            <tr>
+              <td>21. Maj 2015</td>
+              <td>Ålborg</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=438&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=418f99d476c9e51607e3b4672f138c71">Continuous Delivery Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>30. April 2015</td>
+              <td>Aarhus</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=376&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=0bd15eb7ec377d9bbc41d9f2023c087c">Node.js Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>26. Marts 2015</td>
+              <td>Aarhus</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=374&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=f1676f0d3954abacea239b0435149c1f">Continuous Delivery Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>17. Marts 2015</td>
+              <td>Vejle</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=373&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=eedd8d50ff5791906ad3566fa6fc0c54">Continuous Delivery Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>9. Marts 2015</td>
+              <td>Odense</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=372&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=37b55891460e896f81c30dc3b7f52f5a">Continuous Delivery Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>4. Marts 2015</td>
+              <td>København</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=413&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=5319d8646827a650be7c60382158a1e9">MongoDB Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>15. Jan 2015</td>
+              <td>København</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=408&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=4f924f8959aa22c273fd7c34f12c1b1c">Node.js Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>14. Jan 2015</td>
+              <td>København</td>
+              <td>
+                <a href="https://www.meetup.com/AgilityLab/events/216548902/">Continuous Delivery Warstories (condensed english version)</a >
+              </td>
+            </tr>
+            <tr>
+              <td>20. November 2014</td>
+              <td>Datalog-foreningen (Aarhus)</td>
+              <td>MongoDB Warstories</td>
+            </tr>
+            <tr>
+              <td>16. Oktober 2014</td>
+              <td>Aarhus</td>
+              <td>
+                <a href="https://www.prosa.dk/kalender/hele-kalenderen/?tx_moccrmintegration_courses%5Bcourse%5D=194&tx_moccrmintegration_courses%5Baction%5D=show&tx_moccrmintegration_courses%5Bcontroller%5D=Course&cHash=ce79dc471eda2dbf376974e7aee18c76">MongoDB Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>2. Oktober 2014</td>
+              <td>Datalog-foreningen (Aarhus)</td>
+              <td>
+                <a href="https://www.datalogforeningen.dk/index.php/news/39/15/Faglig-Aften-d-2-oktober-2014-Node-js-warstories">Node.js Warstories</a >
+              </td>
+            </tr>
+            <tr>
+              <td>12. Juni 2014</td>
+              <td>Official MongoDB usergroup (Stockholm)</td>
+              <td>
+                <a href="https://www.meetup.com/Stockholm-MongoDB-User-Group/events/184327682/">MongoDB Warstories (condensed english version)</a >
+              </td>
+            </tr>
+            <tr>
+              <td>20. Maj 2014</td>
+              <td>GOTO Nights (Kbh)</td>
+              <td>
+                <a href="https://secure.trifork.com/cph-2014/freeevent/index.jsp?eventOID=6205">Node.js Warstories
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>20. Marts 2014</td>
+              <td>Odense</td>
+              <td>MongoDB Warstories</td>
+            </tr>
+            <tr>
+              <td>13. Marts 2014</td>
+              <td>Odense</td>
+              <td>Node.js Warstories</td>
+            </tr>
+            <tr>
+              <td>4. Marts 2014</td>
+              <td>Vejle</td>
+              <td>MongoDB Warstories</td>
+            </tr>
+            <tr>
+              <td>27. Februar 2014</td>
+              <td>Vejle</td>
+              <td>Node.js Warstories</td>
+            </tr>
+            <tr>
+              <td>4. Februar 2014</td>
+              <td>Ålborg</td>
+              <td>MongoDB Warstories</td>
+            </tr>
+            <tr>
+              <td>23. Oktober 2013</td>
+              <td>Tech Talent Night - DTU (Kbh)</td>
+              <td>
+                <a href="https://www.facebook.com/events/623608751022985/">MongoDB Warstories</a>
+              </td>
+            </tr>
+            <tr>
+              <td>12. September 2013</td>
+              <td>Aarhus</td>
+              <td>Node.js Warstories</td>
+            </tr>
+            <tr>
+              <td>3. September 2013</td>
+              <td>Ålborg</td>
+              <td>
+                <a href="https://www.geekhub.dk/meetings/358">Node.js og kunsten at vedligeholde 1,2 mio. linjer JavaScript
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>12. Marts 2013</td>
+              <td>GOTO Nights (Kbh)</td>
+              <td>
+                <a href="https://secure.trifork.com/aarhus-2013/freeevent/index.jsp?eventOID=5245">Sådan bliver 1 million linjer JavaScript-kode nemme at vedligeholde</a >
+              </td>
+            </tr>
+            <tr>
+              <td>16. Aug 2012</td>
+              <td>CopenhagenJS (Kbh)</td>
+              <td>
+                <a href="https://lanyrd.com/2012/copenhagenjs-august/">Quality in JavaScript code (browser and node.js)
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer>
+        <ul class="fukol contact text-center">
+          <li>
+            <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
+          </li>
+          <li>
+            <a class="phone" href="tel:+4553727528">(+45) 53 72 75 28</a>
+          </li>
+          <li>
+            <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
+          </li>
+          <li>
+            <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
+          </li>
+          <li>
+            <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
+          </li>
+          <li>
+            <a class="github" href="https://github.com/ebdrup">ebdrup</a>
+        </ul>
+        <p class="small copy">&copy; Allan Ebdrup. Foto fra GOTO af:
+          <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse
+          </a >
+        </p>
+      </p>
+    </footer>
+
+  </div>
+  {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
+  {{ "_includes/js/defer.js" | load | jsmin | script | safe }}
+</body>
 </html>

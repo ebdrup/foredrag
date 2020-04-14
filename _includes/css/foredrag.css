@@ -4,8 +4,7 @@ html {
 }
 
 body {
-  font-weight: 400;
-  font-size: 18px;
+
 }
 
 h1 {
@@ -32,8 +31,9 @@ q {
 .fukol {
   display: flex;
   flex-wrap: wrap;
-  margin: -0.5em;
+  margin: -0.5em; /* -0.5em is from fukol */
   padding-inline-start: 0px;
+  padding-bottom: 1em;
 }
 
 .fukol > * {
@@ -43,10 +43,6 @@ q {
 }
 .blank {
   visibility: hidden;
-}
-
-.content-list {
-  margin: 1.5em -1em 1.5em -0.5em; /* -0.5em is from fukol */
 }
 
 /* https://github.com/Heydon/fukol-grids */
@@ -71,7 +67,7 @@ q {
 
 /* https://github.com/Heydon/fukol-grids */
 .results > * {
-  flex: 1 0 14em;
+  flex: 1 0 10em;
 }
 
 .result .text-xlarge {
@@ -79,13 +75,12 @@ q {
 }
 
 .result {
-  margin: 20px;
   padding: 5px 20px 15px 20px;
   color: #fff;
   background-color: #4ba13f;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
   display: inline-block;
-  font-weight: 900;
+  font-weight: 700;
   border-radius: 5px;
   min-width: 210px;
 }
@@ -127,7 +122,7 @@ q {
 
 .header-in-jumbo {
   position: relative;
-  top: -120px;
+  top: -106px;
   z-index: 1;
   display: inline-block;
   opacity: 0.75;
@@ -136,11 +131,7 @@ q {
 }
 
 .header-in-jumbo + * {
-  margin-top: -80px;
-}
-
-.youtube {
-  margin: 26px 0 16px 0;
+  margin-top: -60px;
 }
 
 .spinner {
@@ -152,8 +143,12 @@ q {
   margin-bottom: -100px;
 }
 
+.youtube-caption {
+  margin-bottom: 26px;
+}
+
 .youtube-spinner {
-  top: 140px;
+  top: 17vw;
 }
 
 .youtube > em {
@@ -198,7 +193,7 @@ q {
 
 .goto-eval {
   font-size: 28px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .green {
@@ -237,15 +232,9 @@ q {
   height: 150px;
 }
 
-@media (max-width: 767px) {
-  .small-xs {
-    zoom: 0.5;
-  }
-}
-
 /* https://github.com/Heydon/fukol-grids */
 .contact > * {
-  flex: 1 0 11em;
+  flex: 1 0 10.4em;
 }
 
 .email,
@@ -256,10 +245,11 @@ q {
 .github {
   background-repeat: no-repeat;
   background-size: contain;
-  padding-left: 1.7em;
+  padding-left: 1.6em;
   opacity: 0.5;
   display: inline-block;
-  font-weight: 900;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .email {
