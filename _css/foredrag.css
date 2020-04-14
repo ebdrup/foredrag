@@ -65,6 +65,28 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
+.tweets > li {
+  flex: 1 0 20em;
+}
+
+.tweet-spinner {
+  top: 290px;
+}
+
+/*
+.twitter-tweet {
+  position: static;
+  visibility: visible;
+  display: block;
+  transform: rotate(0deg);
+  width: 500px;
+  margin: 10px auto;
+  max-width: 100%;
+  min-width: 220px;
+  height: 662.781px;
+}*/
+
+/* https://github.com/Heydon/fukol-grids */
 .results > li {
   flex: 1 0 14em;
 }
@@ -138,14 +160,17 @@ q {
   margin: 26px 0 16px 0;
 }
 
-.youtube-spinner {
+.spinner {
   position: relative;
-  top: 140px;
   z-index: -1;
   width: 200px;
   height: 100px;
   display: inline-block;
   margin-bottom: -100px;
+}
+
+.youtube-spinner {
+  top: 140px;
 }
 
 .youtube > em {

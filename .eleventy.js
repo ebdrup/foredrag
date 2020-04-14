@@ -6,6 +6,12 @@ const htmlmin = require('html-minifier');
 const Terser = require('terser');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
+const includeHtml = fs
+  .readdirSync(path.join(__dirname, '_includes'))
+  .filter(file => file.split('.').pop() === 'html')
+  .map(file => fs.readFileSync(path.join(__dirname, '_includes', file), 'utf-8'))
+  .join('\n');
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./_css');
   eleventyConfig.addWatchTarget('./_includes');
@@ -21,6 +27,19 @@ module.exports = function (eleventyConfig) {
     const css = fs.readFileSync(path.join(__dirname, file), 'utf-8');
     const html = fs.readFileSync(path.join(__dirname, this.ctx.page.inputPath), 'utf-8');
     purifyCss(html, css, { output: false, info: true, minify: true }, res =>
+      cb(null, `<style>${res}</style>`),
+    );
+  });
+
+  eleventyConfig.addNunjucksAsyncFilter('purifyCssBasedOnIncludes', function (
+    [cssFile, ...templates],
+    cb,
+  ) {
+    const html = templates
+      .map(file => fs.readFileSync(path.join(__dirname, file), 'utf-8'))
+      .join('\n');
+    const css = fs.readFileSync(path.join(__dirname, cssFile), 'utf-8');
+    purifyCss(html + includeHtml, css, { output: false, info: true, minify: true }, res =>
       cb(null, `<style>${res}</style>`),
     );
   });
