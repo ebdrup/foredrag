@@ -39,6 +39,7 @@ q {
 .fukol > li {
   list-style: none;
   margin: 0.5em;
+  padding-right: 1em;
 }
 .blank {
   visibility: hidden;
@@ -57,7 +58,6 @@ q {
   background-size: 1.5em;
   padding-left: 2em;
   line-height: 1.5em;
-  margin-right: 0.5em 1em 0.5em 0.5em;
 }
 
 .text-xlarge {
@@ -211,15 +211,15 @@ q {
 
 .goto-green-bar {
   background-color: #4ba13f;
-  width: 226px;
+  width: 170px;
 }
 .goto-yellow-bar {
   background-color: #f1c40f;
-  width: 64px;
+  width: 48px;
 }
 .goto-red-bar {
   background-color: #db512f;
-  width: 4px;
+  width: 3px;
 }
 
 .portrait {
