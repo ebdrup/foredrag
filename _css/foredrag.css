@@ -32,25 +32,26 @@ q {
   visibility: hidden;
 }
 
-.contents-of-warstories {
-  margin: 20px 0 20px 0;
-}
-
-.contents-of-warstories > div {
-  padding: 0;
-}
-
+/* https://github.com/Heydon/fukol-grids */
 .content-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5em;
   padding-inline-start: 0px;
-  margin: 0;
+  margin: 20px 0 20px 0;
 }
 
 .content-list > li {
   list-style: none;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACbElEQVR4Xu3av2sUQRQH8O9biFwhNrG0sBYTi0BAsNHuqrvHcY1i/gQrG2NE0USF2PgnaKHVzbtCW5uonfEX/jfnnSxcQETkZnbezBt3t54d9vvZN7PHzSO0/KKW50cH0FVAywW6JdDyAug2QdUl0O/3z/R6vXsArgFYB/AFwDMReW+l8tQAmPkSgDcAzv0Rdk5Ej5xzDywgqAAMBoONqqreATj7j5BPReROboToAOPx+PRsNvsO4PwK4bIjRAdg5n0Ad1cIfzIkK4IGwBGAKx4A9dBsCBoA3wBseAJkQ9AAeAFgJwAgC4IGwEUAnwCcKgEhOkAdmplvAXgeCJC0ElQAlgi3ARxaR1ADKAVBFaAEBHUA6whJACwjJAOwipAUwCJCcgBrCFkALCFkA7CCkBUgEsJ9EXkY+oszO0AEhJ9EtO2cOw5BMAEQAeG1iFwvGqAhwrGIbHUAAQL/xRJYLBavptPpjYD8No7GmLnJfwezqqq2J5PJ5yIBGoavM++JyEFI+PqerEugaXgi2nfO1WePwVc2AAvhs1WAlfBZACyFTw7QNDyAAxHZC17wf7kx2R5gMXyyCrAaPgmA5fDqANbDqwJECP9YRHwaLYL2RpVNMMLhaJLwKhWwbJCqj8fXgl4JkCy8CsBwOHxJRDdLCK8CwMw/AFzwBSCiJ865Xd/7mo6Pvgcw80cAl30eLFd4rQrwapPLGV4FwKdRMnd4FYB60lVaZS2EVwOoJx6NRpvz+fxtK5ulTzbA39rlry7b5b8S0aFz7oPPJqk5NvpXQPNhNebuADRUS5qzq4CS3pbGs3YVoKFa0pytr4Bf9TICUGmBTvkAAAAASUVORK5CYII=');
+  flex: 1 0 20em;
+}
+
+.content-list > li {
+  list-style: none;
+  background-image: url('/img/li-arrow.svg');
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: 47px;
+  background-size: 38px;
   padding: 12px 20px 12px 48px;
   line-height: 1.5em;
 }

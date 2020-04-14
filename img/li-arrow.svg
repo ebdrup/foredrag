@@ -1,0 +1,12 @@
+<svg viewBox="-400 -400 1100 1100" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_1" r="350" fill="#4ba13f" cy="350" cx="350"/>
+  <polygon id="svg_2" points="513.2229609489441,350 320.6879572868347,157.46200561523438 251.39096021652222,226.76100158691406 374.6309504508972,350 251.39096021652222,473.239990234375 320.6879572868347,542.5369873046875 " fill="#FFFFFF"/>
+ </g>
+</svg>
