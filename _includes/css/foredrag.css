@@ -69,19 +69,6 @@ q {
   flex: 1 0 20em;
 }
 
-/*
-.twitter-tweet {
-  position: static;
-  visibility: visible;
-  display: block;
-  transform: rotate(0deg);
-  width: 500px;
-  margin: 10px auto;
-  max-width: 100%;
-  min-width: 220px;
-  height: 662.781px;
-}*/
-
 /* https://github.com/Heydon/fukol-grids */
 .results > li {
   flex: 1 0 14em;
@@ -94,8 +81,8 @@ q {
 .result {
   margin: 20px;
   padding: 5px 20px 15px 20px;
-  color: #eee;
-  background-color: #3f8a35;
+  color: #fff;
+  background-color: #37792f;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
   display: inline-block;
   font-weight: 900;
