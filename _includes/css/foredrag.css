@@ -222,6 +222,12 @@ q {
   width: 3px;
 }
 
+
+/* https://github.com/Heydon/fukol-grids */
+.about > li {
+  flex: 1 0 20em;
+}
+
 .portrait {
   width: 100px;
   height: 150px;
