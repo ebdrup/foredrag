@@ -7,9 +7,7 @@ const Terser = require('terser');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('./_css');
   eleventyConfig.addWatchTarget('./_includes');
-  eleventyConfig.addWatchTarget('./_js');
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPlugin(lazyImagesPlugin);
   eleventyConfig.addPassthroughCopy('favicon*');

@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#ffffff"/>
     {{["_includes/tweets/tweets.css", "_includes/tweets/tweet1.html", "_includes/tweets/tweet2.html"] | purifyCssBasedOnIncludes | safe}}
     {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
-    {{ "_includes/css/foredrag.css" | purifyCss | safe }}
+    {{["_includes/css/foredrag.css", "index.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
   </head>
 
   <body>
@@ -207,25 +207,7 @@
 
       <h3>Kontakt</h3>
       <p>
-        <ul class="fukol contact">
-          <li>
-            <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-          </li>
-          <li>
-            <a class="phone" href="tel:+4553727528">53 72 75 28</a>
-          </li>
-          <li>
-            <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-          </li>
-          <li>
-            <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-          </li>
-          <li>
-            <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
-          </li>
-          <li>
-            <a class="github" href="https://github.com/ebdrup">ebdrup</a>
-        </ul>
+        {% include 'contact.html' %}
       </p>
 
       <h3>Video</h3>
@@ -676,25 +658,7 @@
       </div>
 
       <footer>
-        <ul class="fukol contact text-center">
-          <li>
-            <a class="email" href="mailto:allan@itforedrag.dk">allan@itforedrag.dk</a>
-          </li>
-          <li>
-            <a class="phone" href="tel:+4553727528">53 72 75 28</a>
-          </li>
-          <li>
-            <a class="twitter" href="https://twitter.com/allanebdrup">allanebdrup</a>
-          </li>
-          <li>
-            <a class="skype" href="skype:username?allanebdrup">allanebdrup</a>
-          </li>
-          <li>
-            <a class="linkedIn" href="https://www.linkedin.com/in/ebdrup/">ebdrup</a>
-          </li>
-          <li>
-            <a class="github" href="https://github.com/ebdrup">ebdrup</a>
-        </ul>
+        {% include 'contact.html' %}
         <p class="small copy">&copy; Allan Ebdrup. Foto fra GOTO af:
           <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse
           </a >
