@@ -191,7 +191,7 @@ q {
 }
 
 .yellow {
-  color: #bb9f00;
+  color: #998200;
 }
 
 .red {
@@ -203,7 +203,7 @@ q {
   width: 226px;
 }
 .goto-yellow-bar {
-  background-color: #bb9f00;
+  background-color: #998200;
   width: 64px;
 }
 .goto-red-bar {
