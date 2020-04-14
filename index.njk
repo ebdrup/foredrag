@@ -23,9 +23,9 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
-    {{["_includes/tweets.css", "_includes/tweet1.html", "_includes/tweet2.html"] | purifyCssBasedOnIncludes | safe}}
-    {{ "_includes/bootstrap.css" | purifyCss | safe }}
-    {{ "_css/foredrag.css" | purifyCss | safe }}
+    {{["_includes/tweets/tweets.css", "_includes/tweets/tweet1.html", "_includes/tweets/tweet2.html"] | purifyCssBasedOnIncludes | safe}}
+    {{ "_includes/external/bootstrap.css" | purifyCss | safe }}
+    {{ "_includes/css/foredrag.css" | purifyCss | safe }}
   </head>
 
   <body>
@@ -241,10 +241,10 @@
       <div class="text-center">
         <ul class="fukol tweets">
           <li>
-            <div>{% include 'tweet1.html' %}</div>
+            <div>{% include 'tweets/tweet1.html' %}</div>
           </li>
           <li>
-            <div>{% include 'tweet2.html' %}</div>
+            <div>{% include 'tweets/tweet2.html' %}</div>
           </li>
         </div>
 
@@ -694,7 +694,7 @@
       </footer>
 
     </div>
-    {{ "_js/webp.js" | load | jsmin | script | safe }}
-    {{ "_js/defer.js" | load | jsmin | script | safe }}
+    {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
+    {{ "_includes/js/defer.js" | load | jsmin | script | safe }}
   </body>
 </html>

@@ -15,7 +15,7 @@ function defer() {
   }
   setTimeout(function () {
     load(document.getElementsByTagName('iframe'));
-    load(document.getElementsByTagName('script'));
+    // load(document.getElementsByTagName('script'));
   }, 2000);
 
   function load(items) {
