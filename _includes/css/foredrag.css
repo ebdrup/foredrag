@@ -28,36 +28,50 @@ q {
   padding: 10px;
 }
 
-.blank {
-  visibility: hidden;
-}
-
 /* https://github.com/Heydon/fukol-grids */
-.content-list {
+.fukol {
   display: flex;
   flex-wrap: wrap;
   margin: -0.5em;
   padding-inline-start: 0px;
-  margin: 20px 0 20px 0;
 }
 
-.content-list > li {
+.fukol > * {
   list-style: none;
+  margin: 0.5em;
+  padding-right: 1em;
+}
+.blank {
+  visibility: hidden;
+}
+
+.content-list {
+  margin: 1.5em -1em 1.5em -0.5em; /* -0.5em is from fukol */
+}
+
+/* https://github.com/Heydon/fukol-grids */
+.content-list > * {
   flex: 1 0 20em;
-}
-
-.content-list > li {
-  list-style: none;
   background-image: url('/img/li-arrow.svg');
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: 38px;
-  padding: 12px 20px 12px 48px;
+  background-size: 1.5em;
+  padding-left: 2em;
   line-height: 1.5em;
 }
 
 .text-xlarge {
   font-size: 250%;
+}
+
+/* https://github.com/Heydon/fukol-grids */
+.tweets > * {
+  flex: 1 0 20em;
+}
+
+/* https://github.com/Heydon/fukol-grids */
+.results > * {
+  flex: 1 0 14em;
 }
 
 .result .text-xlarge {
@@ -67,7 +81,7 @@ q {
 .result {
   margin: 20px;
   padding: 5px 20px 15px 20px;
-  color: #eee;
+  color: #fff;
   background-color: #4ba13f;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
   display: inline-block;
@@ -89,12 +103,6 @@ q {
   font-size: 33%;
   margin-left: -2em;
   vertical-align: middle;
-}
-
-@media (max-width: 991px) {
-  .result {
-    zoom: 0.6;
-  }
 }
 
 .jumbotron {
@@ -135,9 +143,8 @@ q {
   margin: 26px 0 16px 0;
 }
 
-.youtube-spinner {
+.spinner {
   position: relative;
-  top: 140px;
   z-index: -1;
   width: 200px;
   height: 100px;
@@ -145,8 +152,21 @@ q {
   margin-bottom: -100px;
 }
 
+.youtube-spinner {
+  top: 140px;
+}
+
 .youtube > em {
   margin-top: -20px;
+}
+/* https://github.com/Heydon/fukol-grids */
+.prosa > * {
+  flex: 1 0 20em;
+}
+
+.prosa-eval > img {
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .prosa-bar {
@@ -166,11 +186,6 @@ q {
 
 .four-star {
   width: 3px;
-}
-
-.prosa-eval > img {
-  display: inline-block;
-  padding-bottom: 5px;
 }
 
 .goto-bar {
@@ -200,15 +215,21 @@ q {
 
 .goto-green-bar {
   background-color: #4ba13f;
-  width: 226px;
+  width: 170px;
 }
 .goto-yellow-bar {
   background-color: #f1c40f;
-  width: 64px;
+  width: 48px;
 }
 .goto-red-bar {
   background-color: #db512f;
-  width: 4px;
+  width: 3px;
+}
+
+
+/* https://github.com/Heydon/fukol-grids */
+.about > * {
+  flex: 1 0 20em;
 }
 
 .portrait {
@@ -223,18 +244,8 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-.contact {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.5em;
-  padding-inline-start: 0px;
-  margin: 0;
-}
-
-.contact > li {
-  list-style: none;
+.contact > * {
   flex: 1 0 11em;
-  margin: 0.5em;
 }
 
 .email,

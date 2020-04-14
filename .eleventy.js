@@ -25,6 +25,19 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addNunjucksAsyncFilter('purifyCssBasedOnIncludes', function (
+    [cssFile, ...templates],
+    cb,
+  ) {
+    const html = templates
+      .map(file => fs.readFileSync(path.join(__dirname, file), 'utf-8'))
+      .join('\n');
+    const css = fs.readFileSync(path.join(__dirname, cssFile), 'utf-8');
+    purifyCss(html, css, { output: false, info: true, minify: true }, res =>
+      cb(null, `<style>${res}</style>`),
+    );
+  });
+
   eleventyConfig.addFilter('load', function (file) {
     return fs.readFileSync(path.join(__dirname, file), 'utf-8');
   });
