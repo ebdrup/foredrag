@@ -19,7 +19,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncFilterPromise = (name, fn) => {
     eleventyConfig.addNunjucksAsyncFilter(name, (...args) => {
       const cb = args.pop();
-      //console.log(this.ctx.page.inputPath);
       fn.apply(this, args)
         .then((...args) => cb.apply(null, [null, ...args]))
         .catch(cb);
