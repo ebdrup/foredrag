@@ -3,7 +3,7 @@ const path = require('path');
 const fetch = require('cross-fetch');
 const slug = require('slug');
 
-module.exports = async function embedTweet(url, { forceReload = false }) {
+module.exports = async function embedTweet(url, { forceReload = false } = {}) {
   const file = path.join(__dirname, '../_includes/tweets/', `${slug(url)}.html`);
   if (!forceReload && (await fse.pathExists(file))) {
     return await fse.readFile(file, 'utf-8');
@@ -62,7 +62,7 @@ module.exports = async function embedTweet(url, { forceReload = false }) {
 
   await browser.close();
   await fse.writeFile(file, inlineStyleHtml, 'utf-8');
-  console.log(inlineStyleHtml);
+  await require('execa')('prettier', ['--write', file]);
   return inlineStyleHtml;
 };
 

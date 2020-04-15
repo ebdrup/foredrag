@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addNunjucksAsyncFilter(name, (...args) => {
       const cb = args.pop();
       fn.apply(null, args)
-        .then((...args) => cb.apply(null, args))
+        .then((...args) => cb.apply(null, null, args))
         .catch(cb);
     });
   };
