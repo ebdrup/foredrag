@@ -1,6 +1,5 @@
 const fse = require('fs-extra');
 const path = require('path');
-const fetch = require('cross-fetch');
 const slug = require('slug');
 
 module.exports = async function embedTweet(url, { forceReload = false } = {}) {
@@ -13,10 +12,15 @@ module.exports = async function embedTweet(url, { forceReload = false } = {}) {
       'We can not run the embedTweet filter at production build time. Please run "npm test" and commit the embedded tweet that will be generated to GitHub',
     );
   }
+
+  // We require here, because these modules are not present when NODE_ENV='production'
+  const fetch = require('cross-fetch');
+  const puppeteer = require('puppeteer');
+
   const { html } = await (
     await fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(url)}`)
   ).json();
-  const puppeteer = require('puppeteer');
+
   const browser = await puppeteer.launch();
   const shadowPage = await getPageForHtml({ browser, html, opts: { waitUntil: 'networkidle0' } });
 
