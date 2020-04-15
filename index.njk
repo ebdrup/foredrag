@@ -23,24 +23,25 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
-    {{["_includes/tweets/tweets.css", "_includes/tweets/tweet1.html", "_includes/tweets/tweet2.html"] | purifyCssBasedOnIncludes | safe}}
+    {{ "_includes/external/tweets/tweet.css" | load | style | safe }}
     {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
     {{["_includes/css/foredrag.css", "index.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
   </head>
 
   <body>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron webp" id="jumbotron1"></div>
-
-    <div class="container">
-      <h2 class="header-in-jumbo">
+    <div class="jumbotron webp" id="jumbotron1">
+      <h2>
         Foredrag baseret på praktiske erfaringer
       </h2>
+    </div>
+
+    <div class="container">
 
       <h1>
         Continuous Delivery, DevOps &amp; Udviklingsproces
         <br/>
       </h1>
+
       <h2>
         Foredrag
         <em>- af Allan Ebdrup</em>
@@ -75,12 +76,14 @@
         <em>Don't forget about Process Feedback Loops - CoDe konference</em>
       </div>
     </div>
-    <div class="jumbotron webp" id="jumbotron2"></div>
 
-    <div class="container">
-      <h2 class="header-in-jumbo">
+    <div class="jumbotron webp" id="jumbotron2">
+      <h2>
         Foredrag om Udviklingsproces
       </h2>
+    </div>
+
+    <div class="container">
 
       <h3>Titel: Continuous Delivery Warstories</h3>
 
@@ -143,6 +146,7 @@
       </div>
 
       <h3>Indhold i foredraget</h3>
+
       <ul class="content-list fukol">
         <li>
           Hvad er Continuous Delivery og DevOps?
@@ -201,16 +205,19 @@
       </p>
 
       <h3>Pris</h3>
+
       <p>
         Prisen for dette foredrag er 18.000,- hvis det skal holdes i Danmark.
       </p>
 
       <h3>Kontakt</h3>
+
       <p>
         {% include 'contact.html' %}
       </p>
 
       <h3>Video</h3>
+
       <p>
         Jeg udvikler løbende på Continuous Delivery Warstories. Her kan du se en video (47 min) af foredraget fra 2015 på GOTO konferencen.
       </p>
@@ -226,19 +233,21 @@
       </div>
 
       <h2>Tweets fra CoDe konferencen</h3>
+
       <p>
         Jeg har flere gange holde foredrag på CoDe konferencen. CoDe, er en forkortelse af Continuous Delivery. Konferencen handler om det nyeste indenfor udviklingsprocesser of tools. Jeg kan på det varmeste anbefale konferencen.
       </p>
       <div class="fukol tweets">
         <li>
-          <div>{% include 'tweets/tweet1.html' %}</div>
+          <div>{{ 'https://twitter.com/code_conf/status/651724049463312384' | embedTweet | safe }}</div>
         </li>
         <li>
-          <div>{% include 'tweets/tweet2.html' %}</div>
+          <div>{{ 'https://twitter.com/code_conf/status/651720912128081920' | embedTweet | safe }}</div>
         </li>
       </div>
 
       <h2>Evalueringerer af foredrag</h2>
+
       <p>
         Her er lidt eksempler på evalueringer af mine foredrag.
       </p>
@@ -342,14 +351,17 @@
       </p>
       <hr/>
     </div>
-    <div class="jumbotron webp" id="jumbotron3"></div>
 
-    <div class="container">
-      <h2 class="header-in-jumbo">
+    <div class="jumbotron webp" id="jumbotron3">
+      <h2>
         CTO med solid udviklererfaring
       </h2>
+    </div>
+
+    <div class="container">
 
       <h3>Om Allan Ebdrup</h3>
+
       <ul class="fukol about">
         <li>
           <p>

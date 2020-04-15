@@ -3,10 +3,6 @@ html {
   overflow-x: hidden;
 }
 
-body {
-
-}
-
 h1 {
   color: #666;
   font-weight: bolder;
@@ -41,8 +37,68 @@ q {
   margin: 0.5em;
   padding-right: 1em;
 }
+
 .blank {
   visibility: hidden;
+}
+
+.text-xlarge {
+  font-size: 250%;
+}
+
+.jumbotron {
+  position: relative;
+  background-size: cover;
+  height: 300px;
+  padding:0;
+}
+
+.jumbotron > h2 {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  max-width: 80%;
+  z-index: 1;
+  display: inline-block;
+  opacity: 0.75;
+  padding: 0 5px 4px 10px;
+  background-color: #fff;
+}
+
+#jumbotron1 {
+  background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015-wide-blur.jpg.webp');
+  background-position: 50%;
+}
+
+#jumbotron2 {
+  background-image: url('/img/goto-wide-blur.jpg.webp');
+  background-position: 0;
+}
+
+#jumbotron3 {
+  background-image: url('/img/goto2-wide.jpg.webp');
+  background-position: 0 30%;
+}
+
+.spinner {
+  position: relative;
+  z-index: -1;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  margin-bottom: -100px;
+}
+
+.youtube-caption {
+  margin-bottom: 26px;
+}
+
+.youtube-spinner {
+  top: 17vw;
+}
+
+.youtube > em {
+  margin-top: -20px;
 }
 
 /* https://github.com/Heydon/fukol-grids */
@@ -54,10 +110,6 @@ q {
   background-size: 1.5em;
   padding-left: 2em;
   line-height: 1.5em;
-}
-
-.text-xlarge {
-  font-size: 250%;
 }
 
 /* https://github.com/Heydon/fukol-grids */
@@ -94,66 +146,13 @@ q {
   font-size: 24px;
   margin: 16px 0 0 3px;
 }
+
 .result-top {
   font-size: 33%;
   margin-left: -2em;
   vertical-align: middle;
 }
 
-.jumbotron {
-  background-size: cover;
-  height: 300px;
-}
-
-#jumbotron1 {
-  background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015-wide-blur.jpg.webp');
-  background-position: 50%;
-}
-
-#jumbotron2 {
-  background-image: url('/img/goto-wide-blur.jpg.webp');
-  background-position: 0;
-}
-
-#jumbotron3 {
-  background-image: url('/img/goto2-wide.jpg.webp');
-  background-position: 0 30%;
-}
-
-.header-in-jumbo {
-  position: relative;
-  top: -106px;
-  z-index: 1;
-  display: inline-block;
-  opacity: 0.75;
-  padding: 0 5px 4px 10px;
-  background-color: #fff;
-}
-
-.header-in-jumbo + * {
-  margin-top: -60px;
-}
-
-.spinner {
-  position: relative;
-  z-index: -1;
-  width: 200px;
-  height: 100px;
-  display: inline-block;
-  margin-bottom: -100px;
-}
-
-.youtube-caption {
-  margin-bottom: 26px;
-}
-
-.youtube-spinner {
-  top: 17vw;
-}
-
-.youtube > em {
-  margin-top: -20px;
-}
 /* https://github.com/Heydon/fukol-grids */
 .prosa > * {
   flex: 1 0 20em;
