@@ -23,6 +23,7 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
+    {{ "_includes/external/tweets/tweet.css" | safe }}
     {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
     {{["_includes/css/foredrag.css", "index.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
   </head>

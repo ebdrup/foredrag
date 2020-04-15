@@ -1,9 +1,19 @@
 const fse = require('fs-extra');
 const path = require('path');
 const slug = require('slug');
+const purifyCss = require('purify-css');
+
+function checkStatus(res) {
+  if (res.ok) {
+    // res.status >= 200 && res.status < 300
+    return res;
+  } else {
+    throw new Error(res.statusText);
+  }
+}
 
 module.exports = async function embedTweet(url, { forceReload = false } = {}) {
-  const file = path.join(__dirname, '../_includes/tweets/', `${slug(url)}.html`);
+  const file = path.join(__dirname, '../_includes/external/tweets/', `${slug(url)}.html`);
   if (!forceReload && (await fse.pathExists(file))) {
     return await fse.readFile(file, 'utf-8');
   }
@@ -13,64 +23,54 @@ module.exports = async function embedTweet(url, { forceReload = false } = {}) {
     );
   }
 
+  // console.log(this.ctx.page.inputPath);
+
   // We require here, because these modules are not present when NODE_ENV='production'
   const fetch = require('cross-fetch');
   const puppeteer = require('puppeteer');
 
-  const { html } = await (
-    await fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(url)}`)
+  const { html } = await checkStatus(
+    await fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(url)}`),
   ).json();
+
+  console.log({ html });
 
   const browser = await puppeteer.launch();
   const shadowPage = await getPageForHtml({ browser, html, opts: { waitUntil: 'networkidle0' } });
 
   const content = await shadowPage.evaluate(() => {
-    let counter = 0;
-    const styles = {};
+    const cssTagContent = [];
     const shadow = document.body.childNodes['0'].shadowRoot;
     subtreeSet(document.body).forEach(e => {
-      const id = e.id || `_id${counter++}`;
-      styles[id] = JSON.parse(JSON.stringify(getComputedStyle(e)));
-      e.id = id;
+      if (['style'].includes((e.tagName || '').toLowerCase())) {
+        cssTagContent.push(e.textContent || e.innerHTML || e.innerText);
+      }
     });
     removeStylesAndScripts(document.body);
-    subtreeSet(document.body).forEach(e => {
-      if (e.className) {
-        e.className = '';
-      }
-      if (e.style) {
-        e.style = '';
-      }
-    });
     const html = shadow.innerHTML.replace(/ (class|style)=""/gm, '').replace(/(\s*\n\s*)+/gm, '\n');
-    return { html, styles };
+    return { html, cssTagContent };
   });
 
-  const page = await getPageForHtml({ browser, ...content });
-  const inlineStyleHtml = await page.evaluate(() => {
-    [...document.body.getElementsByTagName('*')].forEach(e => {
-      const style = content.styles[e.id];
-      if (style) {
-        const currentStyle = JSON.parse(JSON.stringify(getComputedStyle(e)));
-        Object.entries(style).forEach(([key, value]) => {
-          if (currentStyle[key] !== style[key]) {
-            e.style[key] = style[key];
-          }
-        });
-        return true;
-      }
-    });
-    removeStylesAndScripts(document.body);
-    return document.body.innerHTML;
-  });
+  const cssFile = path.join(__dirname, '../_includes/external/tweets/', `tweet.css`);
+  if (forceReload || !(await fse.pathExists(cssFile))) {
+    const cssImport = content.cssTagContent.find(css => css.includes('@import'));
+    const cssUrl = (/url\("([^"]*)"\)/.exec(cssImport) || [])[1];
+    if (cssUrl) {
+      const css = await checkStatus(await fetch(cssUrl)).text();
+      const purifiedCss = await new Promise(resolve =>
+        purifyCss(content.html, css, { output: false, info: true, minify: true }, resolve),
+      );
+      await fse.writeFile(cssFile, purifiedCss, 'utf-8');
+    }
+  }
 
   await browser.close();
-  await fse.writeFile(file, inlineStyleHtml, 'utf-8');
+  await fse.writeFile(file, content.html, 'utf-8');
   await require('execa')('prettier', ['--write', file]);
-  return inlineStyleHtml;
+  return content.html;
 };
 
-async function getPageForHtml({ browser, html, opts, styles }) {
+async function getPageForHtml({ browser, html, opts, styles, css }) {
   const tmp = require('tmp');
   const { name: tmpFile } = tmp.fileSync({ postfix: '.html' });
   const script = styles ? `<script>const content={styles:${JSON.stringify(styles)}};</script>` : '';
@@ -81,6 +81,11 @@ async function getPageForHtml({ browser, html, opts, styles }) {
   if (styles) {
     await page.addScriptTag({
       content: `const content={styles:${JSON.stringify(styles)}};`,
+    });
+  }
+  if (css) {
+    await page.addScriptTag({
+      content: `const css=${JSON.stringify(css)};`,
     });
   }
   await page.addScriptTag({
