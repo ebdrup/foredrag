@@ -5,7 +5,7 @@ const url = 'https://twitter.com/code_conf/status/651724049463312384';
 describe.only(`fetching tweet ${url} for embedding`, () => {
   let res;
   before(async () => {
-    res = await embedTweet(url);
+    res = await embedTweet(url, { forceReload: true });
   });
 
   it('should return html', () => {
