@@ -23,7 +23,7 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
-    {{["_includes/tweets/tweets.css", "_includes/tweets/tweet1.html", "_includes/tweets/tweet2.html"] | purifyCssBasedOnIncludes | safe}}
+    {{ "_includes/external/tweets/tweet.css" | load | style | safe }}
     {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
     {{["_includes/css/foredrag.css", "index.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
   </head>
@@ -239,10 +239,10 @@
       </p>
       <div class="fukol tweets">
         <li>
-          <div>{% include 'tweets/tweet1.html' %}</div>
+          <div>{{ 'https://twitter.com/code_conf/status/651724049463312384' | embedTweet | safe }}</div>
         </li>
         <li>
-          <div>{% include 'tweets/tweet2.html' %}</div>
+          <div>{{ 'https://twitter.com/code_conf/status/651720912128081920' | embedTweet | safe }}</div>
         </li>
       </div>
 
