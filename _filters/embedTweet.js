@@ -47,6 +47,12 @@ module.exports = async function embedTweet(url, { forceReload = false }) {
     [...document.body.getElementsByTagName('*')].forEach(e => {
       const style = content.styles[e.id];
       if (style) {
+        const currentStyle = JSON.parse(JSON.stringify(getComputedStyle(e)));
+        Object.entries(style).forEach(([key, value]) => {
+          if (currentStyle[key] !== style[key]) {
+            e.style[key] = style[key];
+          }
+        });
         return true;
       }
     });
