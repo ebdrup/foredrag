@@ -91,7 +91,7 @@ q {
   background-color: #fff;
 }
 
-.jumbotron + .container > h3 {
+.jumbotron + .container > * {
   margin-top: 0.5rem;
 }
 
