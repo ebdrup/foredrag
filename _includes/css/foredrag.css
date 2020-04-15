@@ -134,7 +134,8 @@ q {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
-  min-width: 210px;
+  width: 100%;
+  max-width: 210px;
 }
 
 .result-threeLetterPercentage {
