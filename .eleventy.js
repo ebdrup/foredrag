@@ -5,6 +5,7 @@ const purifyCss = require('purify-css');
 const htmlmin = require('html-minifier');
 const Terser = require('terser');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const embedTweet = require('./_filters/embedTweet');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./_includes');
@@ -14,6 +15,15 @@ module.exports = function (eleventyConfig) {
 
   let nunjucksEnvironment = new Nunjucks.Environment(new Nunjucks.FileSystemLoader('_includes'));
   eleventyConfig.setLibrary('njk', nunjucksEnvironment);
+
+  eleventyConfig.addNunjucksAsyncFilterPromise = (name, fn) => {
+    eleventyConfig.addNunjucksAsyncFilter(name, (...args) => {
+      const cb = args.pop();
+      fn.apply(null, args)
+        .then((...args) => cb.apply(null, args))
+        .catch(cb);
+    });
+  };
 
   eleventyConfig.addNunjucksAsyncFilter('purifyCss', function (file, cb) {
     const css = fs.readFileSync(path.join(__dirname, file), 'utf-8');
@@ -39,6 +49,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('load', function (file) {
     return fs.readFileSync(path.join(__dirname, file), 'utf-8');
   });
+
+  eleventyConfig.addNunjucksAsyncFilterPromise('embedTweet', embedTweet);
 
   eleventyConfig.addFilter('script', function (code) {
     return `<script type="text/javascript">${code}</script>`;
