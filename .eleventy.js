@@ -57,6 +57,10 @@ module.exports = function (eleventyConfig) {
     return `<script type="text/javascript">${code}</script>`;
   });
 
+  eleventyConfig.addFilter('style', function (code) {
+    return `<style>${code}</style>`;
+  });
+
   eleventyConfig.addFilter('jsmin', function (code) {
     let minified = Terser.minify(code);
     if (minified.error) {

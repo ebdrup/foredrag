@@ -33,8 +33,6 @@ module.exports = async function embedTweet(url, { forceReload = false } = {}) {
     await fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(url)}`),
   ).json();
 
-  console.log({ html });
-
   const browser = await puppeteer.launch();
   const shadowPage = await getPageForHtml({ browser, html, opts: { waitUntil: 'networkidle0' } });
 
