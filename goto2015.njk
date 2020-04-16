@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        {% include 'meta.html' %}
+        <meta name="description" content="Foredrag om DevOps og Continuous delivery af Allan Ebdrup, se et 47 minutters foredrag, som blev holdt på GOTO konferencen">
+        {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
+        {{["_includes/css/foredrag.css", "ignite.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
+    </head>
+
+    <body>
+        <div class="jumbotron webp" id="jumbotron1">
+            <h2>
+                GOTO 2015
+            </h2>
+        </div>
+
+        <div class="container">
+
+            <h1>
+                Continuous Delivery Warstories
+            </h1>
+            <em>- foredrag af Allan Ebdrup</em>
+
+            <h2>47 min Video</h2>
+
+            <p>
+                Dette er en 47 min video af foredrage Continuous Delivery Warstories, afholdt på GOTO konferencen i 2015. Foredraget bliver løbende udviklet. Læs mere om Continuous Delevery Warstories på
+                <a href="/">forsiden</a>
+            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe title="Continuous Delivery Warstories - GOTO konference" class="embed-responsive-item" src="https://www.youtube.com/embed/pZ--Tkbop40" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            </div>
+            <div class="text-center youtube-caption">
+                <em>Continuous Delivery Warstories - GOTO konference</em>
+            </div>
+
+            <footer>
+                {% include 'contact.html' %}
+                <p class="small copy">&copy; Allan Ebdrup.
+                </p>
+            </footer>
+        </div>
+        {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
+    </body>
+</html>

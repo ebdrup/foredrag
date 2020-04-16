@@ -1,28 +1,8 @@
 <!DOCTYPE html>
 <html lang="da">
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Foredrag om DevOps og Continuous delivery af Allan Ebdrup">
     <title>Allan Ebdrup - foredrag</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png"/>
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/favicon/apple-touch-icon-60x60.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png"/>
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png"/>
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/favicon/apple-touch-icon-144x144.png"/>
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon-180x180.png"/>
-    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32"/>
-    <link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192"/>
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16"/>
-    <link rel="manifest" href="/favicon/manifest.json"/>
-    <meta name="msapplication-TileColor" content="#da532c"/>
-    <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png"/>
-    <meta name="theme-color" content="#ffffff"/>
+    {% include 'meta.html' %}}
     {{ "_includes/external/tweets/tweet.css" | load | style | safe }}
     {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
     {{["_includes/css/foredrag.css", "index.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
@@ -59,23 +39,12 @@
             <b>i medlems-organisationer</b>
             inden for IT-branchen.
           </p>
+          <p>
+            Se et eksempel på en kort præsentation af mig i denne
+            <a href='/ignite'>5 min video</a>.</p>
         </div>
       </div>
 
-      <h2>5 min Video</h2>
-
-      <p>
-        Her er en kort 5 min video af en ignite talk jeg gav til CoDe konferencen. Konceptet bag en ignite talk er, at præsentationen automatisk hopper til næste slide hvert 30. sekund, og så skal man får det til at passe.
-      </p>
-      <div class="text-center">
-        <img src="/img/spinner-200px.svg" alt="" class="spinner youtube-spinner">
-      </div>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe title="Don't forget about Process Feedback Loops - CoDe konference" class="embed-responsive-item blank" data-src="https://www.youtube.com/embed/6ETz4ZrqJq8" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-      </div>
-      <div class="text-center youtube-caption">
-        <em>Don't forget about Process Feedback Loops - CoDe konference</em>
-      </div>
     </div>
 
     <div class="jumbotron webp" id="jumbotron2">
@@ -237,18 +206,10 @@
       <h3>Video</h3>
 
       <p>
-        Jeg udvikler løbende på Continuous Delivery Warstories. Her kan du se en video (47 min) af foredraget fra 2015 på GOTO konferencen.
+        Jeg udvikler løbende på Continuous Delivery Warstories. Hvis du gerne vil se lidt mere om hvordan foredraget opleves, har jeg en
+        <a href="/goto2015">video (47 min)</a>, optaget på GOTO konferencen i 2015.
       </p>
 
-      <div class="text-center">
-        <img src="/img/spinner-200px.svg" alt="" class="spinner youtube-spinner">
-      </div>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe title="Continuous Delivery Warstories - GOTO konference" class="embed-responsive-item blank" data-src="https://www.youtube.com/embed/pZ--Tkbop40" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-      </div>
-      <div class="text-center youtube-caption">
-        <em>Continuous Delivery Warstories - GOTO konference</em>
-      </div>
       <h2>Evalueringerer af foredrag</h2>
 
       <p>
@@ -423,7 +384,7 @@
 
       <hr/>
 
-      <h3>Foredragskalender</h3>
+      <h2>Foredragskalender</h2>
 
       <div class="table-responsive">
         <table class="small table table-striped">

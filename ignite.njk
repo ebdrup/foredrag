@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        {% include 'meta.html' %}
+        <meta name="description" content="Foredrag om DevOps og Continuous delivery af Allan Ebdrup, se en kort 5 minutters ignite talk, som blev holdt på CoDe konferencen">
+        {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
+        {{["_includes/css/foredrag.css", "ignite.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
+    </head>
+
+    <body>
+        <div class="jumbotron webp" id="jumbotron1">
+            <h2>
+                Ignite talk
+            </h2>
+        </div>
+
+        <div class="container">
+
+            <h1>
+                Don't forget about Process Feedback Loops
+            </h1>
+            <em>- ignite talk af Allan Ebdrup</em>
+
+            <h2>5 min Video</h2>
+
+            <p>
+                Her er en kort 5 min video af en ignite talk jeg gav til CoDe konferencen. Konceptet bag en ignite talk er, at præsentationen automatisk hopper til næste slide hvert 30. sekund, og så skal man får det til at passe.
+            </p>
+            <p>
+                Læs mere om foredrag af Allan Ebdrup på
+                <a href="/">forsiden</a>
+            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe title="Don't forget about Process Feedback Loops - CoDe konference" class="embed-responsive-item" src="https://www.youtube.com/embed/6ETz4ZrqJq8" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            </div>
+            <div class="text-center youtube-caption">
+                <em>Don't forget about Process Feedback Loops - CoDe konference</em>
+            </div>
+
+            <footer>
+                {% include 'contact.html' %}
+                <p class="small copy">&copy; Allan Ebdrup.
+                </p>
+            </footer>
+        </div>
+        {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
+    </body>
+</html>

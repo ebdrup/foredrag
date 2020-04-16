@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   overflow-x: hidden;
 }
 
@@ -32,7 +33,6 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-
 .fukol {
   display: flex;
   flex-wrap: wrap;
@@ -41,7 +41,7 @@ q {
   padding-bottom: 1em;
 }
 
-.fukol>* {
+.fukol > * {
   list-style: none;
   margin: 0.5em;
   padding-right: 1em;
@@ -56,8 +56,8 @@ q {
   padding-bottom: 1em;
 }
 
-.body-text>* {
-    flex: 1 0 20em;
+.body-text > * {
+  flex: 1 0 20em;
   list-style: none;
   margin: 0;
   padding-right: 1em;
@@ -79,7 +79,7 @@ q {
   margin-bottom: 0;
 }
 
-.jumbotron>h2 {
+.jumbotron > h2 {
   position: absolute;
   bottom: 0;
   left: 10%;
@@ -94,7 +94,6 @@ q {
 .jumbotron + .container > * {
   margin-top: 0.5rem;
 }
-
 
 #jumbotron1 {
   background-image: url('/img/Continuous-Delivery-Warstories-14th-Jan-2015-wide-blur.jpg.webp');
@@ -128,13 +127,12 @@ q {
   top: 17vw;
 }
 
-.youtube>em {
+.youtube > em {
   margin-top: -20px;
 }
 
 /* https://github.com/Heydon/fukol-grids */
-
-.content-list>* {
+.content-list > * {
   flex: 1 0 20em;
   background-image: url('/img/li-arrow.svg');
   background-repeat: no-repeat;
@@ -145,14 +143,12 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-
-.tweets>* {
+.tweets > * {
   flex: 1 0 20em;
 }
 
 /* https://github.com/Heydon/fukol-grids */
-
-.results>* {
+.results > * {
   flex: 1 0 10em;
 }
 
@@ -189,12 +185,11 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-
-.prosa>* {
+.prosa > * {
   flex: 1 0 20em;
 }
 
-.prosa-eval>img {
+.prosa-eval > img {
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -264,12 +259,16 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-
-.contact>* {
+.contact > * {
   flex: 1 0 10.4em;
 }
 
-.email, .phone, .twitter, .skype, .linkedIn, .github {
+.email,
+.phone,
+.twitter,
+.skype,
+.linkedIn,
+.github {
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 1.8em;
