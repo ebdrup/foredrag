@@ -1,2 +1,3 @@
-_includes
+_includes/external
+!_includes/externals/tweets/*.html
 _site
