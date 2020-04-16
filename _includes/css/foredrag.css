@@ -11,6 +11,10 @@ h1 {
   font-size: 2rem;
 }
 
+h1 + em {
+  color: #998200;
+}
+
 h2 {
   color: #4ba13f;
   font-weight: bolder;
@@ -154,11 +158,12 @@ q {
 
 .result .text-xlarge {
   margin-bottom: -10px;
+  color: #fff;
 }
 
 .result {
-  padding: 5px 20px 15px 20px;
-  color: #fff;
+  padding: 5px 5px 15px 5px;
+  color: #f1c40f;
   background-color: #4ba13f;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
   display: inline-block;
@@ -168,17 +173,31 @@ q {
   max-width: 210px;
 }
 
+.result-icon {
+  display: inline-block;
+  margin-bottom: 0.22em;
+  height: 0.7em;
+}
+
+.result-icon-180 {
+  transform: rotate(180deg);
+  display: inline-block;
+  margin-bottom: 0.07em;
+  height: 0.7em;
+}
+
 .result-threeLetterPercentage {
   margin-right: 13px;
 }
 
 .result-percent {
-  position: absolute;
   font-size: 24px;
   margin: 16px 0 0 3px;
+  color: #19381f;
 }
 
 .result-top {
+  color: #19381f;
   font-size: 33%;
   margin-left: -2em;
   vertical-align: middle;
