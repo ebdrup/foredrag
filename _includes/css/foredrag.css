@@ -36,6 +36,10 @@ q {
   padding: 10px;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 /* https://github.com/Heydon/fukol-grids */
 .fukol {
   display: flex;
