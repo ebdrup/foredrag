@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="da">
     <head>
-        {% include 'meta.html' %}
+        <title>Allan Ebdrup - foredrag: Ignite talk</title>
         <meta name="description" content="Foredrag om DevOps og Continuous delivery af Allan Ebdrup, se en kort 5 minutters ignite talk, som blev holdt på CoDe konferencen">
+        {% include 'meta.html' %}
         {{ "_includes/external/bootstrap4.css" | purifyCss | safe }}
         {{["_includes/css/foredrag.css", "ignite.njk", "_includes/contact.html"] | purifyCssBasedOnIncludes | safe }}
     </head>
