@@ -75,24 +75,12 @@ module.exports = async function embedTweet(
   return styledHtml;
 };
 
-async function getPageForHtml({ browser, html, opts, styles, css }) {
+async function getPageForHtml({ browser, html, opts }) {
   const tmp = require('tmp');
   const { name: tmpFile } = tmp.fileSync({ postfix: '.html' });
-  const script = styles ? `<script>const content={styles:${JSON.stringify(styles)}};</script>` : '';
-  await fse.writeFile(tmpFile, `<html><body>${script}${html}</body></html>`, 'utf-8');
+  await fse.writeFile(tmpFile, `<html><body>${html}</body></html>`, 'utf-8');
   const page = await browser.newPage();
   await page.goto(`file://${tmpFile}`, opts);
-
-  if (styles) {
-    await page.addScriptTag({
-      content: `const content={styles:${JSON.stringify(styles)}};`,
-    });
-  }
-  if (css) {
-    await page.addScriptTag({
-      content: `const css=${JSON.stringify(css)};`,
-    });
-  }
   await page.addScriptTag({
     content: subtreeSet.toString(),
   });
