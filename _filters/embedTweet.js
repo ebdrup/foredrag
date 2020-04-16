@@ -48,7 +48,16 @@ module.exports = async function embedTweet(
       }
     });
     removeStylesAndScripts(document.body);
-    const html = shadow.innerHTML.replace(/ (class|style)=""/gm, '').replace(/(\s*\n\s*)+/gm, '\n');
+    subtreeSet(document.body).forEach(e => {
+      Array.from(e.attributes).forEach(({ nodeName, nodeValue }) => {
+        if (/^(data-.*|id)$/.test(nodeName) && nodeValue) {
+          e.setAttribute(nodeName, '');
+        }
+      });
+    });
+    const html = shadow.innerHTML
+      .replace(/ (id|class|style|data-[^=]*)=""/gm, '')
+      .replace(/(\s*\n\s*)+/gm, '\n');
     return { html, cssTagContent };
   });
 
@@ -67,7 +76,8 @@ module.exports = async function embedTweet(
 
   await browser.close();
   !skipWritingFiles && (await fse.writeFile(file, content.html, 'utf-8'));
-  await require('execa')('prettier', ['--write', file]);
+  !skipWritingFiles && (await require('execa')('prettier', ['--write', file]));
+  // console.log(content.html);
   return content.html;
 };
 
