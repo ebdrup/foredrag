@@ -207,6 +207,10 @@ q {
   flex: 1 0 20em;
 }
 
+.eval-votes {
+  color: #676;
+}
+
 .prosa-eval > img {
   display: inline-block;
   padding-bottom: 5px;

@@ -27,8 +27,6 @@ module.exports = async function embedTweet(
     );
   }
 
-  // console.log(this.ctx.page.inputPath);
-
   // We require here, because these modules are not present when NODE_ENV='production'
   const fetch = require('cross-fetch');
   const puppeteer = require('puppeteer');
