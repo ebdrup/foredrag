@@ -67,7 +67,7 @@ module.exports = async function embedTweet(
   const css = cssCache[cssUrl] || (await checkStatus(await fetch(cssUrl)).text());
   cssCache[cssUrl] = css;
 
-  const styledHtml = juice(`<style>${css}</style>${content.html}`);
+  const styledHtml = juice.inlineContent(content.html, css);
 
   await browser.close();
 
