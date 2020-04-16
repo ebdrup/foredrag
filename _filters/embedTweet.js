@@ -12,7 +12,10 @@ function checkStatus(res) {
   }
 }
 
-module.exports = async function embedTweet(url, { forceReload = false } = {}) {
+module.exports = async function embedTweet(
+  url,
+  { forceReload = false, skipWritingFiles = false } = {},
+) {
   const file = path.join(__dirname, '../_includes/external/tweets/', `${slug(url)}.html`);
   if (!forceReload && (await fse.pathExists(file))) {
     return await fse.readFile(file, 'utf-8');
@@ -58,12 +61,12 @@ module.exports = async function embedTweet(url, { forceReload = false } = {}) {
       const purifiedCss = await new Promise(resolve =>
         purifyCss(content.html, css, { output: false, info: true, minify: true }, resolve),
       );
-      await fse.writeFile(cssFile, purifiedCss, 'utf-8');
+      !skipWritingFiles && (await fse.writeFile(cssFile, purifiedCss, 'utf-8'));
     }
   }
 
   await browser.close();
-  await fse.writeFile(file, content.html, 'utf-8');
+  !skipWritingFiles && (await fse.writeFile(file, content.html, 'utf-8'));
   await require('execa')('prettier', ['--write', file]);
   return content.html;
 };
