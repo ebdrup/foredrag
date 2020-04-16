@@ -8,10 +8,10 @@ const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const embedTweet = require('./_filters/embedTweet');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('./_includes');
+  eleventyConfig.addWatchTarget('./_includes/*');
   eleventyConfig.addPassthroughCopy('img');
+  eleventyConfig.addPassthroughCopy('favicon');
   eleventyConfig.addPlugin(lazyImagesPlugin);
-  eleventyConfig.addPassthroughCopy('favicon*');
 
   let nunjucksEnvironment = new Nunjucks.Environment(new Nunjucks.FileSystemLoader('_includes'));
   eleventyConfig.setLibrary('njk', nunjucksEnvironment);
