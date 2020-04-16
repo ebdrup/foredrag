@@ -70,9 +70,10 @@ module.exports = async function embedTweet(
   const styledHtml = juice(`<style>${css}</style>${content.html}`);
 
   await browser.close();
+
   !skipWritingFiles && (await fse.writeFile(file, styledHtml, 'utf-8'));
   !skipWritingFiles && (await require('execa')('prettier', ['--write', file]));
-  console.log(content.html);
+
   return styledHtml;
 };
 
