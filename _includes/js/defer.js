@@ -1,3 +1,5 @@
+// the way to use this script is to change the "src" attribute of any iframe or script you want to defer loading to an attribute called "data-src" instead
+// also for iframes you can add the css class "blank", that will leave a blank placeholde until it's loaded, so the screen doesn't jump when it's loaded
 if (window.addEventListener) {
   // W3C standard
   window.addEventListener('load', defer, false);
