@@ -1,7 +1,6 @@
 const fse = require('fs-extra');
 const path = require('path');
 const slug = require('slug');
-const purifyCss = require('purify-css');
 
 function checkStatus(res) {
   if (res.ok) {
@@ -11,6 +10,8 @@ function checkStatus(res) {
     throw new Error(res.statusText);
   }
 }
+
+const cssCache = {};
 
 module.exports = async function embedTweet(
   url,
@@ -31,6 +32,7 @@ module.exports = async function embedTweet(
   // We require here, because these modules are not present when NODE_ENV='production'
   const fetch = require('cross-fetch');
   const puppeteer = require('puppeteer');
+  const juice = require('juice');
 
   const { html } = await checkStatus(
     await fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(url)}`),
@@ -60,25 +62,18 @@ module.exports = async function embedTweet(
       .replace(/(\s*\n\s*)+/gm, '\n');
     return { html, cssTagContent };
   });
+  const cssImport = content.cssTagContent.find(css => css.includes('@import'));
+  const cssUrl = (/url\("([^"]*)"\)/.exec(cssImport) || [])[1];
+  const css = cssCache[cssUrl] || (await checkStatus(await fetch(cssUrl)).text());
+  cssCache[cssUrl] = css;
 
-  const cssFile = path.join(__dirname, '../_includes/external/tweets/', `tweet.css`);
-  if (forceReload || !(await fse.pathExists(cssFile))) {
-    const cssImport = content.cssTagContent.find(css => css.includes('@import'));
-    const cssUrl = (/url\("([^"]*)"\)/.exec(cssImport) || [])[1];
-    if (cssUrl) {
-      const css = await checkStatus(await fetch(cssUrl)).text();
-      const purifiedCss = await new Promise(resolve =>
-        purifyCss(content.html, css, { output: false, info: true, minify: true }, resolve),
-      );
-      !skipWritingFiles && (await fse.writeFile(cssFile, purifiedCss, 'utf-8'));
-    }
-  }
+  const styledHtml = juice(`<style>${css}</style>${content.html}`);
 
   await browser.close();
-  !skipWritingFiles && (await fse.writeFile(file, content.html, 'utf-8'));
+  !skipWritingFiles && (await fse.writeFile(file, styledHtml, 'utf-8'));
   !skipWritingFiles && (await require('execa')('prettier', ['--write', file]));
-  // console.log(content.html);
-  return content.html;
+  console.log(content.html);
+  return styledHtml;
 };
 
 async function getPageForHtml({ browser, html, opts, styles, css }) {
