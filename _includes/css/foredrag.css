@@ -152,7 +152,7 @@ q {
 }
 
 /* https://github.com/Heydon/fukol-grids */
-.tweets > * {
+.talk-tweets > * {
   flex: 1 0 20em;
 }
 
