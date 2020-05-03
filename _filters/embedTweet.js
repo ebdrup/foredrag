@@ -1,3 +1,4 @@
+const { promisify } = require('util');
 const fse = require('fs-extra');
 const path = require('path');
 const slug = require('slug');
@@ -65,7 +66,10 @@ module.exports = async function embedTweet(
   const css = cssCache[cssUrl] || (await checkStatus(await fetch(cssUrl)).text());
   cssCache[cssUrl] = css;
 
-  const styledHtml = juice.inlineContent(content.html, css);
+  const styledHtml = await promisify(juice.juiceResources)(
+    juice.inlineContent(content.html, css),
+    {},
+  );
 
   await browser.close();
 

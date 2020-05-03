@@ -47,7 +47,8 @@
     "nunjucks": "3.2.1",
     "purify-css": "1.2.5",
     "slug": "2.1.1",
-    "terser": "4.6.11"
+    "terser": "4.6.11",
+    "web-resource-inliner": "4.3.4"
   },
   "devDependencies": {
     "@practio/eslint-config-practio": "7.1.0",

@@ -1,8 +1,10 @@
 const path = require('path');
 const fs = require('fs');
+const { promisify } = require('util');
 const Nunjucks = require('nunjucks');
 const purifyCss = require('purify-css');
 const htmlmin = require('html-minifier');
+const webResourceInliner = require('web-resource-inliner');
 const Terser = require('terser');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const embedTweet = require('./_filters/embedTweet');
@@ -67,6 +69,14 @@ module.exports = function (eleventyConfig) {
       return code;
     }
     return minified.code;
+  });
+
+  // inline resources in HTML output
+  eleventyConfig.addTransform('inline', async function (fileContent, outputPath) {
+    if (outputPath.indexOf('.html') > -1) {
+      return await promisify(webResourceInliner.html)({ fileContent });
+    }
+    return content;
   });
 
   // Minify HTML output
