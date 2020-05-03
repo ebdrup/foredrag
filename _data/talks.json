@@ -1,0 +1,197 @@
+[
+  {
+    "date": "3-4. April 2019",
+    "location": "DevOps days Copenhagen",
+    "link": "https://www.devopsdays.org/events/2019-copenhagen/welcome/",
+    "title": "War stories about the Ops in DevOps"
+  },
+  {
+    "date": "29. November 2018",
+    "location": "SummIT - Den progressive it-organisation",
+    "link": "https://www.dit.dk/Konferencer/SummIT-2018",
+    "title": "DevOps – Historier fra fronten"
+  },
+  {
+    "date": "7. Maj 2018",
+    "location": "eDreams spanien",
+
+    "title": "Continuous Delivery Warstories (lukket arrangement)"
+  },
+  {
+    "date": "4. Maj 2018",
+    "location": "IT-Universitetet",
+
+    "title": "Continuous Delivery Warstories (Gæsteforelæsning)"
+  },
+  {
+    "date": "24. April 2018",
+    "location": "DevOps days Copenhagen",
+    "link": "https://www.devopsdays.org/events/2018-copenhagen/speakers/",
+    "title": "Don't forget about your process feedback loops"
+  },
+  {
+    "date": "30. Maj 2017",
+    "location": "Computerworld",
+    "link": "https://computerworldevents.dk/553/devops_konference",
+    "title": "For the love of DevOps (keynote)"
+  },
+  {
+    "date": "7. April 2017",
+    "location": "IT-Universitetet",
+
+    "title": "Continuous Delivery Warstories (Gæsteforelæsning)"
+  },
+  {
+    "date": "19. Januar 2016",
+    "location": "CopenhagenJS",
+    "link": "https://www.meetup.com/copenhagenjs/events/236816775/",
+    "title": "How we replaced our Drupal CMS with 589 lines of JavaScript"
+  },
+  {
+    "date": "30. September 2016",
+    "location": "Datamatikerlærer-foreningen",
+
+    "title": "Continuous Delivery Warstories (lukket arrangement)"
+  },
+  {
+    "date": "16. Juni 2016",
+    "location": "DSB",
+
+    "title": "Continuous Delivery Warstories (lukket arrangement)"
+  },
+  {
+    "date": "9. Juni 2016",
+    "location": "Københavns Universitet",
+
+    "title": "Continuous Delivery Warstories (lukket arrangement)"
+  },
+  {
+    "date": "23. Oktober 2015",
+    "location": "Gyldendal",
+
+    "title": "Continuous Delivery Warstories (lukket arrangement)"
+  },
+  {
+    "date": "7. Oktober 2015",
+    "location": "CoDe-conf København",
+    "link": "https://www.code-conf.com/",
+    "title": "Continuous Delivery Warstories (C-level condensed english version)"
+  },
+  {
+    "date": "5. Oktober 2015",
+    "location": "GOTO København",
+    "link": "https://gotocon.com/cph-2015/presentation/Continuous%20Delivery%20warstories",
+    "title": "Continuous Delivery Warstories (condensed english version)"
+  },
+  {
+    "date": "16. September 2015",
+    "location": "København",
+    "title": "Continuous Delivery Warstories"
+  },
+  {
+    "date": "26. Aug 2015",
+    "location": "Odense",
+
+    "title": "Continuous Delivery Warstories (lukket arrangement)"
+  },
+  {
+    "date": "21. Maj 2015",
+    "location": "Ålborg",
+    "title": "Continuous Delivery Warstories"
+  },
+  {
+    "date": "30. April 2015",
+    "location": "Aarhus",
+    "title": "Node.js Warstories"
+  },
+  {
+    "date": "26. Marts 2015",
+    "location": "Aarhus",
+    "title": "Continuous Delivery Warstories"
+  },
+  {
+    "date": "17. Marts 2015",
+    "location": "Vejle",
+    "title": "Continuous Delivery Warstories"
+  },
+  {
+    "date": "9. Marts 2015",
+    "location": "Odense",
+    "title": "Continuous Delivery Warstories"
+  },
+  {
+    "date": "4. Marts 2015",
+    "location": "København",
+    "title": "MongoDB Warstories"
+  },
+  {
+    "date": "15. Jan 2015",
+    "location": "København",
+    "title": "Node.js Warstories"
+  },
+  {
+    "date": "14. Jan 2015",
+    "location": "København",
+    "link": "https://www.meetup.com/AgilityLab/events/216548902/",
+    "title": "Continuous Delivery Warstories (condensed english version)"
+  },
+  {
+    "date": "20. November 2014",
+    "location": "Datalog-foreningen (Aarhus)",
+
+    "title": "MongoDB Warstories"
+  },
+  {
+    "date": "16. Oktober 2014",
+    "location": "Aarhus",
+    "title": "MongoDB Warstories"
+  },
+  {
+    "date": "2. Oktober 2014",
+    "location": "Datalog-foreningen (Aarhus)",
+    "link": "https://www.datalogforeningen.dk/index.php/news/39/15/Faglig-Aften-d-2-oktober-2014-Node-js-warstories",
+    "title": "Node.js Warstories"
+  },
+  {
+    "date": "12. Juni 2014",
+    "location": "Official MongoDB usergroup (Stockholm)",
+    "link": "https://www.meetup.com/Stockholm-MongoDB-User-Group/events/184327682/",
+    "title": "MongoDB Warstories (condensed english version)"
+  },
+  {
+    "date": "20. Maj 2014",
+    "location": "GOTO Nights (Kbh)",
+    "link": "https://secure.trifork.com/cph-2014/freeevent/index.jsp?eventOID=6205",
+    "title": "Node.js Warstories"
+  },
+  { "date": "20. Marts 2014", "location": "Odense", "title": "MongoDB Warstories" },
+  { "date": "13. Marts 2014", "location": "Odense", "title": "Node.js Warstories" },
+  { "date": "4. Marts 2014", "location": "Vejle", "title": "MongoDB Warstories" },
+  { "date": "27. Februar 2014", "location": "Vejle", "title": "Node.js Warstories" },
+  { "date": "4. Februar 2014", "location": "Ålborg", "title": "MongoDB Warstories" },
+  {
+    "date": "23. Oktober 2013",
+    "location": "Tech Talent Night - DTU (Kbh)",
+    "link": "https://www.facebook.com/events/623608751022985/",
+    "title": "MongoDB Warstories"
+  },
+  { "date": "12. September 2013", "location": "Aarhus", "title": "Node.js Warstories" },
+  {
+    "date": "3. September 2013",
+    "location": "Ålborg",
+    "link": "https://www.geekhub.dk/meetings/358",
+    "title": "Node.js og kunsten at vedligeholde 1,2 mio. linjer JavaScript"
+  },
+  {
+    "date": "12. Marts 2013",
+    "location": "GOTO Nights (Kbh)",
+    "link": "https://secure.trifork.com/aarhus-2013/freeevent/index.jsp?eventOID=5245",
+    "title": "Sådan bliver 1 million linjer JavaScript-kode nemme at vedligeholde"
+  },
+  {
+    "date": "16. Aug 2012",
+    "location": "CopenhagenJS (Kbh)",
+    "link": "https://lanyrd.com/2012/copenhagenjs-august/",
+    "title": "Quality in JavaScript code (browser and node.js)"
+  }
+]

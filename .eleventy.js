@@ -78,18 +78,20 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  // Minify HTML output
-  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (outputPath.indexOf('.html') > -1) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-      return minified;
-    }
-    return content;
-  });
+  if (process.env.NODE_ENV === 'production') {
+    // Minify HTML output
+    eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+      if (outputPath.indexOf('.html') > -1) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+        });
+        return minified;
+      }
+      return content;
+    });
+  }
 
   eleventyConfig.addPlugin(lazyImagesPlugin);
 };

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "build": "rm -rf _site && rm .lazyimages.json && eleventy",
+    "build": "rm -rf _site && eleventy",
     "start": "rm -rf _site && rm .lazyimages.json && eleventy --serve",
     "eslint:fix": "eslint --fix . || echo Unfixable errors were ignored and should be caught by the tests",
     "prettier:write": "prettier --loglevel warn --write \"**/*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)\"",
