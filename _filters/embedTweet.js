@@ -66,10 +66,9 @@ module.exports = async function embedTweet(
   const css = cssCache[cssUrl] || (await checkStatus(await fetch(cssUrl)).text());
   cssCache[cssUrl] = css;
 
-  const styledHtml = await promisify(juice.juiceResources)(
-    juice.inlineContent(content.html, css),
-    {},
-  );
+  const styledHtml = (
+    await promisify(juice.juiceResources)(juice.inlineContent(content.html, css), {})
+  ).replace(/\bclass="[^"]+"/g, '');
 
   await browser.close();
 
