@@ -372,30 +372,11 @@
         Jeg har flere gange holde foredrag på CoDe konferencen. CoDe, er en forkortelse af Continuous Delivery. Konferencen handler om det nyeste indenfor udviklingsprocesser of tools. Det er en konference som jeg anbefaler på det varmeste. Der er også tweets fra andre arrangementer.
       </p>
       <div class="fukol talk-tweets">
-        <div>
-          <div>{{ 'https://twitter.com/code_conf/status/651724049463312384' | embedTweet | safe }}</div>
-        </div>
-        <div>
-          <div>{{ 'https://twitter.com/code_conf/status/651720912128081920' | embedTweet | safe }}</div>
-        </div>
-        <div>
-          <div>{{ 'https://twitter.com/RandomSort/status/1113357014606983168' | embedTweet | safe }}</div>
-        </div>
-        <div>
-          <div>{{ 'https://twitter.com/devopsdayscph/status/1113356154250383360' | embedTweet | safe }}</div>
-        </div>
-        <div>
-          <div>{{ 'https://twitter.com/meekrosoft/status/988742361151926272' | embedTweet | safe }}</div>
-        </div>
-        <div>
-          <div>{{ 'https://twitter.com/kimstensdal/status/869535950610862082' | embedTweet | safe }}</div>
-        </div>
-        <div>
-          <div>{{ 'https://twitter.com/code_conf/status/651719076025339904' | embedTweet | safe }}</div>
-        </div>
-        <div>
-          <div>{{ 'https://twitter.com/apaipi/status/651719084246175744' | embedTweet | safe }}</div>
-        </div>
+        {% for tweet in tweets %}
+          <div>
+            <div>{{ tweet | embedTweet | safe }}</div>
+          </div>
+        {% endfor %}
       </div>
 
       <hr/>
@@ -422,7 +403,7 @@
                     {% endif %}
 
                     {{ talk.title }}
-                    War stories about the Ops in DevOps
+
                     {% if talk.link %}
                     </a>
                     {% endif%}
@@ -439,10 +420,9 @@
             <a href="https://www.linkedin.com/profile/view?id=AAkAAAALvRQBxVT98MQ_ew1h2L0EkjTJ4eF40pw">Lars Kruse</a>. Du kan finde koden til dette website på
             <a href="https://github.com/ebdrup/foredrag">GitHub</a>
           </p>
-        </p>
-      </footer>
+        </footer>
 
-    </div>
-    {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
-  </body>
-</html>
+      </div>
+      {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
+    </body>
+  </html>
