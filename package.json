@@ -11,7 +11,7 @@
   "scripts": {
     "test": "mocha",
     "build": "rm -rf _site && eleventy",
-    "start": "rm -rf _site && rm .lazyimages.json && eleventy --serve",
+    "start": "rm -rf _site && rm -f .lazyimages.json && eleventy --serve",
     "eslint:fix": "eslint --fix . || echo Unfixable errors were ignored and should be caught by the tests",
     "prettier:write": "prettier --loglevel warn --write \"**/*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)\"",
     "format": "npm run eslint:fix && npm run prettier:write",
@@ -41,6 +41,7 @@
   "homepage": "http://itforedrag.dk",
   "dependencies": {
     "@11ty/eleventy": "0.10.0",
+    "eleventy-plugin-inline-tweet": "0.1.2",
     "eleventy-plugin-lazyimages": "github:ebdrup/eleventy-plugin-lazyimages#Handle_inlined_data-url_images_and_look_for_filetyp_in_format_parameter_of_querystring",
     "fs-extra": "9.0.0",
     "html-minifier": "4.0.0",

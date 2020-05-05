@@ -7,7 +7,7 @@ const htmlmin = require('html-minifier');
 const webResourceInliner = require('web-resource-inliner');
 const Terser = require('terser');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
-const embedTweet = require('./_filters/embedTweet');
+const inlineTweetPlugin = require('eleventy-plugin-inline-tweet');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./_includes/*');
@@ -16,15 +16,6 @@ module.exports = function (eleventyConfig) {
 
   let nunjucksEnvironment = new Nunjucks.Environment(new Nunjucks.FileSystemLoader('_includes'));
   eleventyConfig.setLibrary('njk', nunjucksEnvironment);
-
-  eleventyConfig.addNunjucksAsyncFilterPromise = (name, fn) => {
-    eleventyConfig.addNunjucksAsyncFilter(name, (...args) => {
-      const cb = args.pop();
-      fn.apply(this, args)
-        .then((...args) => cb.apply(null, [null, ...args]))
-        .catch(cb);
-    });
-  };
 
   eleventyConfig.addNunjucksAsyncFilter('purifyCss', function (file, cb) {
     const css = fs.readFileSync(path.join(__dirname, file), 'utf-8');
@@ -51,8 +42,6 @@ module.exports = function (eleventyConfig) {
     return fs.readFileSync(path.join(__dirname, file), 'utf-8');
   });
 
-  eleventyConfig.addNunjucksAsyncFilterPromise('embedTweet', embedTweet);
-
   eleventyConfig.addFilter('script', function (code) {
     return `<script type="text/javascript">${code}</script>`;
   });
@@ -69,6 +58,9 @@ module.exports = function (eleventyConfig) {
     }
     return minified.code;
   });
+
+  // embed tweets
+  eleventyConfig.addPlugin(inlineTweetPlugin);
 
   // inline resources in HTML output
   eleventyConfig.addTransform('inline', async function (fileContent, outputPath) {

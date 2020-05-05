@@ -374,7 +374,7 @@
       <div class="fukol talk-tweets">
         {% for tweet in tweets %}
           <div>
-            <div>{{ tweet | embedTweet | safe }}</div>
+            <div>inlineTweet:{{ tweet | safe }}</div>
           </div>
         {% endfor %}
       </div>
