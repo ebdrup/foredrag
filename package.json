@@ -41,7 +41,7 @@
   "homepage": "http://itforedrag.dk",
   "dependencies": {
     "@11ty/eleventy": "0.10.0",
-    "eleventy-plugin-inline-tweet": "0.1.2",
+    "eleventy-plugin-inline-tweet": "1.0.0",
     "eleventy-plugin-lazyimages": "github:ebdrup/eleventy-plugin-lazyimages#Handle_inlined_data-url_images_and_look_for_filetyp_in_format_parameter_of_querystring",
     "fs-extra": "9.0.0",
     "html-minifier": "4.0.0",
