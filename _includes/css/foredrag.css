@@ -3,6 +3,10 @@ html {
   overflow-x: hidden;
 }
 
+:root {
+  font-size: min(calc(1em + 0.3vw), 4em);
+}
+
 h1 {
   color: #454;
   font-weight: 700;
