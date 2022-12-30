@@ -63,7 +63,7 @@
     "lint-staged": "10.2.2",
     "melody-idom": "1.7.1",
     "melody-runtime": "1.7.1",
-    "mocha": "7.1.2",
+    "mocha": "10.2.0",
     "mocha-eslint": "6.0.0",
     "open": "7.0.3",
     "prettier": "2.0.5",
