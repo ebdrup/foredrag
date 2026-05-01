@@ -52,7 +52,6 @@
     "open": "11.0.0",
     "prettier": "3.8.3",
     "prettier-plugin-twig-melody": "0.4.6",
-    "puppeteer": "24.42.0",
     "tmp": "0.2.5"
   },
   "mocha": {
