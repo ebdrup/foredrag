@@ -14,17 +14,8 @@ const require = createRequire(import.meta.url);
 
 // Load purify-css (has deprecation warning from uglifyjs)
 let purifyCss;
-const origWarn = console.warn;
-console.warn = () => {};
-try {
-  purifyCss = require('purify-css');
-} catch (e) {
-  // Fallback: read CSS file directly if purify-css fails
-  console.warn('Warning: purify-css not available, using raw CSS');
-  purifyCss = null;
-} finally {
-  console.warn = origWarn;
-}
+
+purifyCss = require('purify-css');
 
 // Fallback function to read CSS directly
 function getCssDirect(file) {
@@ -58,14 +49,9 @@ export default function (eleventyConfig) {
   addAsyncFilter('purifyCss', function (file, cb) {
     const css = fs.readFileSync(path.join(__dirname, file), 'utf-8');
     const html = fs.readFileSync(path.join(__dirname, this.ctx.page.inputPath), 'utf-8');
-    if (purifyCss) {
-      purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
-        cb(null, `<style>${res}</style>`),
-      );
-    } else {
-      // Fallback: return raw CSS
-      cb(null, `<style>${css}</style>`);
-    }
+    purifyCss(html, css, { output: false, info: true, minify: true }, purifiedCSS =>
+      cb(null, `<style>${purifiedCSS}</style>`),
+    );
   });
 
   addAsyncFilter('purifyCssBasedOnIncludes', function ([cssFile, ...templates], cb) {
@@ -73,14 +59,9 @@ export default function (eleventyConfig) {
       .map(file => fs.readFileSync(path.join(__dirname, file), 'utf-8'))
       .join('\n');
     const css = fs.readFileSync(path.join(__dirname, cssFile), 'utf-8');
-    if (purifyCss) {
-      purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
-        cb(null, `<style>${res}</style>`),
-      );
-    } else {
-      // Fallback: return raw CSS
-      cb(null, `<style>${css}</style>`);
-    }
+    purifyCss(html, css, { output: false, info: true, minify: true }, purifiedCSS =>
+      cb(null, `<style>${purifiedCSS}</style>`),
+    );
   });
 
   addFilter('load', function (file) {

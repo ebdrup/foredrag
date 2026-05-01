@@ -13,17 +13,7 @@ const require = createRequire(import.meta.url);
 
 // Load purify-css by suppressing the deprecation warning
 let purifyCss;
-const origWarn = console.warn;
-console.warn = () => {};
-try {
   purifyCss = require('purify-css');
-  console.log('purify-css loaded:', typeof purifyCss);
-} catch (e) {
-  console.error('Failed to load purify-css:', e);
-  purifyCss = () => {};
-} finally {
-  console.warn = origWarn;
-}
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./_includes/*');
@@ -37,8 +27,8 @@ export default function (eleventyConfig) {
   nunjucksEnvironment.addFilter('purifyCss', function (file, callback) {
     const css = fs.readFileSync(path.join(__dirname, file), 'utf-8');
     const html = fs.readFileSync(path.join(__dirname, this.ctx.page.inputPath), 'utf-8');
-    purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
-      callback(null, `<style>${res}</style>`),
+    purifyCss(html, css, { output: false, info: true, minify: true }, purifiedCSS =>
+      callback(null, `<style>${purifiedCSS}</style>`),
     );
   });
 
@@ -47,8 +37,8 @@ export default function (eleventyConfig) {
       .map(file => fs.readFileSync(path.join(__dirname, file), 'utf-8'))
       .join('\n');
     const css = fs.readFileSync(path.join(__dirname, cssFile), 'utf-8');
-    purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
-      callback(null, `<style>${res}</style>`),
+    purifyCss(html, css, { output: false, info: true, minify: true }, purifiedCSS =>
+      callback(null, `<style>${purifiedCSS}</style>`),
     );
   });
 
