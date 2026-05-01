@@ -7,7 +7,6 @@ import htmlmin from 'html-minifier';
 import webResourceInliner from 'web-resource-inliner';
 import { minify as terserMinify } from 'terser';
 import lazyImagesPlugin from 'eleventy-plugin-lazyimages';
-import inlineTweetPlugin from 'eleventy-plugin-inline-tweet';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
