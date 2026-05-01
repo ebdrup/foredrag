@@ -1,5 +1,4 @@
 {
-  "extends": ["@practio/practio"],
   "env": {
     "browser": true
   }

@@ -1,6 +1,5 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { createRequire } from 'module';
+import { fileURLToPath, createRequire } from 'url';
 import fs from 'fs';
 import { promisify } from 'util';
 import Nunjucks from 'nunjucks';
@@ -14,27 +13,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const require = createRequire(import.meta.url);
 
-// Load purify-css (has deprecation warning from uglifyjs)
+// Load purify-css by suppressing the deprecation warning
 let purifyCss;
 const origWarn = console.warn;
 console.warn = () => {};
 try {
   purifyCss = require('purify-css');
+  console.log('purify-css loaded:', typeof purifyCss);
 } catch (e) {
-  // Fallback: read CSS file directly if purify-css fails
-  console.warn('Warning: purify-css not available, using raw CSS');
-  purifyCss = null;
+  console.error('Failed to load purify-css:', e);
+  purifyCss = () => {};
 } finally {
   console.warn = origWarn;
-}
-
-// Fallback function to read CSS directly
-function getCssDirect(file) {
-  try {
-    return fs.readFileSync(path.join(__dirname, file), 'utf-8');
-  } catch (e) {
-    return '';
-  }
 }
 
 export default function (eleventyConfig) {
@@ -45,59 +35,38 @@ export default function (eleventyConfig) {
   let nunjucksEnvironment = new Nunjucks.Environment(new Nunjucks.FileSystemLoader('_includes'));
   eleventyConfig.setLibrary('njk', nunjucksEnvironment);
 
-  // Add filters to both eleventyConfig and custom Nunjucks environment
-  function addFilter(name, filter) {
-    eleventyConfig.addFilter(name, filter);
-    nunjucksEnvironment.addFilter(name, filter);
-  }
-
-  // Add async filters
-  function addAsyncFilter(name, filter) {
-    eleventyConfig.addNunjucksAsyncFilter(name, filter);
-    nunjucksEnvironment.addFilter(name, filter);
-  }
-
-  addAsyncFilter('purifyCss', function (file, cb) {
+  // Add filters to custom Nunjucks environment
+  nunjucksEnvironment.addFilter('purifyCss', function (file, callback) {
     const css = fs.readFileSync(path.join(__dirname, file), 'utf-8');
     const html = fs.readFileSync(path.join(__dirname, this.ctx.page.inputPath), 'utf-8');
-    if (purifyCss) {
-      purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
-        cb(null, `<style>${res}</style>`),
-      );
-    } else {
-      // Fallback: return raw CSS
-      cb(null, `<style>${css}</style>`);
-    }
+    purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
+      callback(null, `<style>${res}</style>`),
+    );
   });
 
-  addAsyncFilter('purifyCssBasedOnIncludes', function ([cssFile, ...templates], cb) {
+  nunjucksEnvironment.addFilter('purifyCssBasedOnIncludes', function ([cssFile, ...templates], callback) {
     const html = templates
       .map(file => fs.readFileSync(path.join(__dirname, file), 'utf-8'))
       .join('\n');
     const css = fs.readFileSync(path.join(__dirname, cssFile), 'utf-8');
-    if (purifyCss) {
-      purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
-        cb(null, `<style>${res}</style>`),
-      );
-    } else {
-      // Fallback: return raw CSS
-      cb(null, `<style>${css}</style>`);
-    }
+    purifyCss(html, css, { output: false, info: true, minify: true }, (err, res) =>
+      callback(null, `<style>${res}</style>`),
+    );
   });
 
-  addFilter('load', function (file) {
+  nunjucksEnvironment.addFilter('load', function (file) {
     return fs.readFileSync(path.join(__dirname, file), 'utf-8');
   });
 
-  addFilter('script', function (code) {
+  nunjucksEnvironment.addFilter('script', function (code) {
     return `<script type="text/javascript">${code}</script>`;
   });
 
-  addFilter('style', function (code) {
+  nunjucksEnvironment.addFilter('style', function (code) {
     return `<style>${code}</style>`;
   });
 
-  addFilter('jsmin', function (code) {
+  nunjucksEnvironment.addFilter('jsmin', function (code) {
     let minified = terserMinify(code);
     if (minified.error) {
       console.log('Terser error: ', minified.error);
@@ -107,7 +76,7 @@ export default function (eleventyConfig) {
   });
 
   // embed tweets
-  //eleventyConfig.addPlugin(inlineTweetPlugin);
+  eleventyConfig.addPlugin(inlineTweetPlugin);
 
   // inline resources in HTML output
   eleventyConfig.addTransform('inline', async function (fileContent, outputPath) {

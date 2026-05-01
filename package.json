@@ -2,11 +2,11 @@
   "name": "itforedrag",
   "version": "1.0.0",
   "description": "itforedrag.dk",
-  "main": "server.js",
+  "type": "module",
   "private": true,
   "engines": {
-    "node": "^12.16.1",
-    "npm": "^6.14.4"
+    "node": "^25.9.0",
+    "npm": "^11.13.0"
   },
   "scripts": {
     "test": "mocha",
@@ -16,19 +16,6 @@
     "prettier:write": "prettier --loglevel warn --write \"**/*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)\"",
     "format": "npm run eslint:fix && npm run prettier:write",
     "download": "curl -sS -o _includes/external/bootstrap4.css https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.@(js|jsx|ts|mjs)": [
-      "eslint --fix"
-    ],
-    "*.@(js|jsx|ts|mjs|json|css|scss|less|html|htm|md|yml|yaml)": [
-      "prettier --loglevel warn --write"
-    ]
   },
   "repository": {
     "type": "git",
@@ -40,36 +27,34 @@
   },
   "homepage": "http://itforedrag.dk",
   "dependencies": {
-    "@11ty/eleventy": "0.10.0",
+    "@11ty/eleventy": "3.1.5",
     "eleventy-plugin-inline-tweet": "1.0.0",
     "eleventy-plugin-lazyimages": "github:ebdrup/eleventy-plugin-lazyimages#Handle_inlined_data-url_images_and_look_for_filetyp_in_format_parameter_of_querystring",
-    "fs-extra": "9.0.0",
+    "fs-extra": "11.3.4",
     "html-minifier": "4.0.0",
-    "nunjucks": "3.2.1",
-    "purify-css": "1.2.5",
-    "slug": "2.1.1",
-    "terser": "4.6.13",
-    "web-resource-inliner": "4.3.4"
+    "nunjucks": "3.2.4",
+    "purify-css": "1.1.9",
+    "slug": "11.0.1",
+    "terser": "5.46.2",
+    "web-resource-inliner": "8.0.0"
   },
   "devDependencies": {
-    "@practio/eslint-config-practio": "7.1.0",
-    "@practio/prettier-config": "4.0.0",
-    "chai": "4.2.0",
-    "chai-http": "4.3.0",
-    "cross-fetch": "3.0.4",
-    "execa": "4.0.0",
-    "husky": "4.2.5",
-    "juice": "6.0.0",
-    "lint-staged": "10.2.2",
-    "melody-idom": "1.7.1",
-    "melody-runtime": "1.7.1",
-    "mocha": "7.1.2",
-    "mocha-eslint": "6.0.0",
-    "open": "7.0.3",
-    "prettier": "2.0.5",
-    "prettier-plugin-twig-melody": "0.4.3",
-    "puppeteer": "3.0.2",
-    "tmp": "0.2.1"
+    "chai": "6.2.2",
+    "chai-http": "5.1.2",
+    "cross-fetch": "4.1.0",
+    "execa": "9.6.1",
+    "husky": "9.1.7",
+    "juice": "11.1.1",
+    "lint-staged": "16.4.0",
+    "melody-idom": "1.7.5",
+    "melody-runtime": "1.7.5",
+    "mocha": "11.3.0",
+    "mocha-eslint": "7.0.0",
+    "open": "11.0.0",
+    "prettier": "3.8.3",
+    "prettier-plugin-twig-melody": "0.4.6",
+    "puppeteer": "24.42.0",
+    "tmp": "0.2.5"
   },
   "mocha": {
     "require": [
