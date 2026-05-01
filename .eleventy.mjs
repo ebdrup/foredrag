@@ -6,7 +6,6 @@ import Nunjucks from 'nunjucks';
 import htmlmin from 'html-minifier';
 import webResourceInliner from 'web-resource-inliner';
 import { minify as terserMinify } from 'terser';
-import lazyImagesPlugin from 'eleventy-plugin-lazyimages';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -99,6 +98,4 @@ export default function (eleventyConfig) {
       return content;
     });
   }
-
-  eleventyConfig.addPlugin(lazyImagesPlugin);
 };

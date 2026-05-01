@@ -28,31 +28,21 @@
   "homepage": "http://itforedrag.dk",
   "dependencies": {
     "@11ty/eleventy": "3.1.5",
-    "eleventy-plugin-lazyimages": "github:ebdrup/eleventy-plugin-lazyimages#Handle_inlined_data-url_images_and_look_for_filetyp_in_format_parameter_of_querystring",
-    "fs-extra": "11.3.4",
     "html-minifier": "4.0.0",
     "nunjucks": "3.2.4",
-    "purify-css": "1.1.9",
-    "slug": "11.0.1",
+    "purify-css": "1.2.5",
     "terser": "5.46.2",
     "web-resource-inliner": "8.0.0"
   },
   "devDependencies": {
     "chai": "6.2.2",
     "chai-http": "5.1.2",
-    "cross-fetch": "4.1.0",
     "execa": "9.6.1",
     "husky": "9.1.7",
-    "juice": "11.1.1",
     "lint-staged": "16.4.0",
-    "melody-idom": "1.7.5",
-    "melody-runtime": "1.7.5",
-    "mocha": "11.3.0",
+    "mocha": "7.2.0",
     "mocha-eslint": "7.0.0",
-    "open": "11.0.0",
-    "prettier": "3.8.3",
-    "prettier-plugin-twig-melody": "0.4.6",
-    "tmp": "0.2.5"
+    "prettier": "3.8.3"
   },
   "mocha": {
     "require": [
