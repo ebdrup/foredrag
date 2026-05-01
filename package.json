@@ -58,7 +58,7 @@
   },
   "mocha": {
     "require": [
-      "./test/common.js"
+      "./test/common.cjs"
     ],
     "spec": "./test/**/*.spec.js",
     "recursive": true,
