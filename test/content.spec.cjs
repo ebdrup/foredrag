@@ -1,27 +1,30 @@
-const execa = require('execa');
+const { execa } = require('execa');
 
-describe('serving data on port 8081', () => {
+describe('serving data on port 8082', () => {
   let server;
 
-  before(done => {
-    server = execa('eleventy', ['--serve', '--port=8081'], {
+  before(function(done) {
+    this.timeout(10000); // 10 seconds
+    server = execa('eleventy', ['--serve', '--port=8082'], {
       preferLocal: true,
-      silent: true,
     });
-    server.stdout.on('data', data => {
-      if (/Serving files from: _site/.test(data.toString())) {
+    const checkData = data => {
+      if (/Server at http:\/\/localhost:8082\//.test(data.toString())) {
         return done();
       }
-    });
+    };
+    server.stdout.on('data', checkData);
+    server.stderr.on('data', checkData);
   });
 
   after(() => {
-    server.cancel();
+    server.kill();
   });
 
   describe('getting root document', () => {
     it('should be able to get root document from server', async () => {
-      expect(await request('http://localhost:8081').get('/')).to.have.status(200);
+      const response = await fetch('http://localhost:8082');
+      expect(response.status).to.equal(200);
     });
   });
 });

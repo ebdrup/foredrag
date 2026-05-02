@@ -1,7 +1,10 @@
 {
-  "extends": ["@practio/practio"],
   "env": {
     "mocha": true
   },
-  "globals": { "request": true, "expect": true }
+  "globals": { "request": true, "expect": true },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  }
 }

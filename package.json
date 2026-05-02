@@ -9,7 +9,7 @@
     "npm": "^11.13.0"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --require ./test/common.cjs --extension cjs \"./test/**/*.cjs\"",
     "build": "rm -rf _site && eleventy",
     "start": "rm -rf _site && rm -f .lazyimages.json && eleventy --serve",
     "eslint:fix": "eslint --fix . || echo Unfixable errors were ignored and should be caught by the tests",
@@ -40,7 +40,7 @@
     "execa": "9.6.1",
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
-    "mocha": "7.2.0",
+    "mocha": "11.7.5",
     "mocha-eslint": "7.0.0",
     "prettier": "3.8.3"
   },
@@ -48,7 +48,10 @@
     "require": [
       "./test/common.cjs"
     ],
-    "spec": "./test/**/*.spec.js",
+    "spec": "./test/**/*.cjs",
+    "extension": [
+      "cjs"
+    ],
     "recursive": true,
     "timeout": 200000,
     "exit": true
